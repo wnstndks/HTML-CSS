@@ -1,0 +1,56 @@
+/* 
+    중괄호안에 스타일 보관하고 점 찍고 이름을 작명하기
+    그 스타일들을 하나의 이름으로 축약한 것
+    한 줄 끝나면 세미콜론 반드시 쓰
+*/
+/*
+class는 점찍고 작명하기
+이름은 중복해서 사용하지 말기
+*/
+
+/*class selector*/
+.profile{
+    width: 100px; 
+    display: block; 
+    margin-left:auto; 
+    margin-right:auto;
+}
+
+.title{
+    font-size: 16px; 
+    color:blueviolet;
+    letter-spacing: 5px; 
+    text-align:center;
+}
+.paragraph{
+    letter-spacing: 5px; 
+    text-align:center;
+}
+
+.content{
+    color:red
+}
+
+/*class 말고 다르게 태그명을 가지고 스타일을 넣을 수 있다
+- 해당 태그의 스타일
+- #을 하면 id라는 게 있는데 id로 축약해서  class랑 똑같이 넣을수도 있다.
+.class vs #id => class추천
+*/
+
+/*tag selecter*/
+p{
+    text-align:center;
+    color:green
+}
+
+/*id selector*/
+#special{
+    text-align:center;
+    color: blue;
+}
+
+/*
+여러개의 스타일의 겹치는 상황이 발생할 경우
+우선순위에따라 스타일이 정해짐 
+class(10점),tag(1점),id(100점), style속성은 1000점-점수가 가장 높아 우선순위가 가장 높다
+*/
