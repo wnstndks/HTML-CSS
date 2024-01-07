@@ -1,11 +1,10 @@
 /* 
     중괄호안에 스타일 보관하고 점 찍고 이름을 작명하기
     그 스타일들을 하나의 이름으로 축약한 것
-    한 줄 끝나면 세미콜론 반드시 쓰
-*/
-/*
-class는 점찍고 작명하기
-이름은 중복해서 사용하지 말기
+    한 줄 끝나면 세미콜론 반드시 쓰기
+    class는 점찍고 작명하기
+    이름은 중복해서 사용하지 말기
+    주석처리는 ctrl+/
 */
 
 /*class selector*/
@@ -70,21 +69,27 @@ class는 점찍고 작명하기
     width:20%; /*부모 태그의 20퍼센트*/
     height: 400px;
     background:cornflowerblue;
-    float: left;
+    /* float: left; */
+    /* display: block : 한행을 전부 차지
+        display: inline-block : 내 크기만큼 차지 - 워드에서 어울림설정과 똑같음, 그러나 이걸 사용하면 박스사이 공백제거가 귀찮음->그래서 div태그에서 공백을 제거해주어야한다-엔터키를 치면 안된다.
+        공백제거 방법1. 박스사이 주석기호 활용
+        2. 부모태그에 font-size:0px로 주기 - 부모 태그로부터 inherit되는 스타일은 중요도 가장 낮음*/
+    display: inline-block;
 }
 .right{
     width: 80%;
     height: 400px;
     background:coral;
-    float: left;
+    /* float: left; */
     /*div는 display block이라는 것을 가지기에 모든 div박스는 가로행을 전부다 차지함
       따라서 float: left를 통해 요소를 붕 띄워서 왼쪽 정렬을 시켜주어야한다.*/
+    display:inline-block;
 }
 .footer{
     width:100%;
     height:100px;
     background-color: grey;
-    clear: both;
+    /* clear: both; */
 }
 /*
 안보이는 이유는 왼쪽 및 오른쪽 박스에 float를 주었기에, 공중에 떠있음 다음에 박스를 쓰면 그 내 위치에 써있음 
