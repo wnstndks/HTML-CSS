@@ -73,8 +73,11 @@
     /* display: block : 한행을 전부 차지
         display: inline-block : 내 크기만큼 차지 - 워드에서 어울림설정과 똑같음, 그러나 이걸 사용하면 박스사이 공백제거가 귀찮음->그래서 div태그에서 공백을 제거해주어야한다-엔터키를 치면 안된다.
         공백제거 방법1. 박스사이 주석기호 활용
-        2. 부모태그에 font-size:0px로 주기 - 부모 태그로부터 inherit되는 스타일은 중요도 가장 낮음*/
+        2. 부모태그에 font-size:0px로 주기 - 부모 태그로부터 inherit되는 스타일은 중요도 가장 낮음
+        + 주변에 글이 있으면 가끔 이상해지기에 vertical-align을 주어야한다.*/
+        /* baseline이 옆에 존재하면 display: inline-block요소들이 baseline위에 오려고 함 ->vertical-align을 주어야 제자리로 온다 */
     display: inline-block;
+    vertical-align:top;
 }
 .right{
     width: 80%;
