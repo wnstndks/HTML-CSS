@@ -25,6 +25,7 @@
 .loopycolors{
     width: 150px;
     position: relative;
+    top:50%;
 }
 .upicon{
     position: absolute;
