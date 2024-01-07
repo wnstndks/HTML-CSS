@@ -20,36 +20,66 @@
     filter:brightness(70%);
 
     padding:1px;
+    position:relative;
 }
 
 .main-title{
-    color:white;
+    color:black;
     font-size:40px;
     margin-top:200px; 
     /*이러면 margin collapse 현상이 생김 박스 2개가 위쪽 테두리가 겹침 이럴 경우 margin도 합쳐짐
     margin collapse가 싫다면 테두리를 떨어트리기, 부모박스에 padding주기*/
     margin-bottom: 1px;
+    text-align: center;
+}
+
+.main-content{
+    font-weight:bold;
+    font-size:15px;
+    text-align: center;
+    color:chocolate;
+
 }
 .main-button{
-    color:black;
-    margin:1px;
     box-shadow: 5px 0px 5px 5px gray;
-    opacity: 0.6;
+    opacity: 0.7;
     transition: 0.3s;
-    width:30%;
-    float:left;
+    margin-left:auto;
+    margin-right: auto;
+    display:block;
+    border:none;
+    /* 
+        좌표속성으로 배치 가능 
+        position : relative(내 원래 위치를 기준점으로 삼아 이동_기준점 잡는 속성)
+        부여하면 1. 좌표이동가능  2.공중에 뜰수 있음
+        position:static 좌표이동x
+        position: fixed 현재 화면이 기준 - 현재 화면을 기준으로 고정되는 요소가 필요하면 사용하기
+        position: absolute - 부모 태그를 기준으로 화면을 움직이고 싶을 때
+        부모는 position:relative를 가진 부모 기준
+        또는 나를 감싸고 있는 부모 태그 기준
+
+        + position:absoulte 준 요소 가운데 정렬 하려면
+        left:0;
+        right:0;
+        margin: auto;
+        width:150px;
+        를 해야한다.
+    */
 
 }
 .main-button.button:hover{
     opacity: 1;
 }
-.container{
-    width:300px;
-    height:100px;
-}
 
-.main-h4{
-    text-align: center;
-    color:white;
-    height:100px;
+.main-block{
+    background-color: lightgrey;
+    position:absolute;
+    top: 500px;
+    left:0;
+    right:0;
+    margin: auto;
+    width:70%;
+    opacity: 0.8;
+    transition: 0.5s;
+    border-radius: 10px;
 }
