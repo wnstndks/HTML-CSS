@@ -19,13 +19,31 @@ h3{
 }
 
 input[type=email]{
-    width: 80%;
-}
-input[type=text]{
-    width: 40%;
-    float:left;
+    width: 90%;
+    height: 30px;
 }
 textarea{
-    width: 80%;
+    width: 100%;
 }
 
+.align{
+    padding: 30px;
+}
+.check
+{
+    position:absolute;
+    margin: 10px;
+}
+
+.main-button{
+    background-color: orange;
+    height: 30px;
+    width: 100px;
+    color:white;
+    font-weight: 300px;
+    border: none;
+    padding-left: 10px;
+    position:relative;
+    left: 230px;
+    
+}
