@@ -451,7 +451,13 @@ div{
 +pcㄹ별로 호환성 이슈 해결책부터 첨부하는 경우가 있는데
 normalize.css파일을 참고해서 사용->브라우저간의 균일한 css
  */
+}
 
-
-
+/* input type에 따라 class 선택가능하다 
+    input[속성명=속성값]*/
+input[type=text]{
+    padding:10px;
+    font-size:20px;
+    border: 2px solid black;
+    border-radius:5px;
 }

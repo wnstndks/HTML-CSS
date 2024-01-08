@@ -24,9 +24,9 @@
         </p>
     </div>
 
-    <br>
-    <!-- box에다 폭을 설정할때 width는 content 영역의 너비를 의미한다. padding이 크다 그러면 box 사이즈도 늘어나보이는것
-        그래서 content부분만 width로 설정하지 말고 padding과 border도 포함해야한다->box-sizing-->
+    <!-- <br>
+     box에다 폭을 설정할때 width는 content 영역의 너비를 의미한다. padding이 크다 그러면 box 사이즈도 늘어나보이는것
+        그래서 content부분만 width로 설정하지 말고 padding과 border도 포함해야한다->box-sizing-
     <div class="main-block" style="padding:50px;"> 
         <h4 style="text-align: center;">How we design our clothes</h5>
         <p style="text-align:center; font-weight: 500;">
@@ -34,6 +34,40 @@
             Leveraging our extensive network of factories and clothing experts allows us to maintain superior quality standards while keeping production costs competitive. 
             This enables us to offer our clientele a unique combination of affordability and exceptional craftsmanship, ensuring they receive value-driven, well-crafted clothing items tailored to their preferences.
         </p>
-    </div>
+    </div> -->
+
+    <!--  사이트를 만들다보면 사용자들이 뭔가를 입력해야하는 form같은게 있음 -->
+    <!-- form, input ->폼을 만들고 싶을때 마다 사용 <form action> ->작성한 내용이 어떤 서버경로로 전달될지
+        <form method> - 작성한 내용이 어떤 방식으로 서버에 전달될지 
+        input type= "text" ->일반 텍스트 입력
+                    "password"->패스워드 입력할때
+                    "email"->이메일입력
+                    "date" ->날짜입력
+                    "checkbox"->체크박스소환
+                    "radio"->라디오버튼
+        input value="미리채워진 값" 
+        placeholder="배경글자"
+        input name="인풋이름" -> 서버에 전달할 때 unique하게 이름을 지정하는데 이거를 통해 서버로 전달할때 이 이름으로 전달됨
+    -->
+    <form>
+        <input type="text" class="text-input">
+        <input>
+        <input>
+    </form>
+    <select>
+        <option></option>
+        <option></option>
+        <option></option>
+    </select>
+    <!-- textarea 큰 input같은거 만들고 싶을 때 사용 그리고 웹 내에서 드래그해서 내가 원하는 사이즈로 만들수있음 -->
+    <!-- textarea rows="10" -10줄을 설정할때 -->
+    <textarea></textarea>
+    <!-- <input type="submit">
+            or
+        <button type="submit">전송</button>
+            =>전송버튼 만들수 있음 -->
+
+
+
 </body>
 </html>
