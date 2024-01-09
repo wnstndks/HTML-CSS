@@ -1,49 +1,124 @@
 body{
-    background-color: gray;
+    margin:0px;
+    background-color: lightslategrey;
 }
-.container{
-    width:500px;
-    height:700px;
+
+div,input,textarea{
+    box-sizing:border-box;
+}
+
+.main-background{
+    width: 100%;
+    height: 500px;
+    background-image: url("../html/musinsa.jpg");
+    background-size: 100px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter:brightness(70%);
+    padding:1px;
+}
+
+.main-title{
+    color:black;
+    font-size:40px;
+    margin-top:200px; 
+    margin-bottom: 1px;
+    text-align: center;
+}
+
+.main-content{
+    font-weight:bold;
+    font-size:15px;
+    text-align: center;
+    color:chocolate;
+
+}
+.main-button{
+    box-shadow: 5px 0px 5px 5px gray;
+    opacity: 0.7;
+    transition: 0.3s;
+    margin-left:auto;
+    margin-right: auto;
+    display:block;
+    border:none;
+}
+.main-button.button:hover{
+    opacity: 1;
+}
+
+.main-block{
+    background-color: lightgrey;
+    position:relative;
+    top: -40px;
+    left:0;
+    right:0;
+    margin: auto;
+    width:80%; 
+    max-width: 600px; 
+    opacity: 0.8;
+    transition: 0.5s;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type=text]{
+    padding:10px;
+    font-size:20px;
+    border: 2px solid black;
+    border-radius:5px;
+}
+/* ----------------------------------------- */
+
+.form-background{
+    background-color: black;
+    padding:30px;
+    width: 80%;
+    max-width:600px;
+    margin:auto;
+}
+
+.contact{
+    width:80%;
+    max-width:600px;
+    padding:3px;
     background-color: white;
     display: block;
     margin-left: auto;
     margin-right:auto;
+    border-radius: 10px;
 }
-.first{
+.form-input{
     width:100%;
+    padding:10px;
+    font-size:20px;
+    border:1px solid black;
+    border-radius:5px;
 }
 
-h3{
-    clear:both;
-    margin: 10px;
+.w-50{
+    width:50%;
+    float:left;
+    padding:10px;
+}
+
+.w-100{
+    width:100%;
+    padding:10px;
 }
 
 input[type=email]{
     width: 90%;
     height: 30px;
 }
+
 textarea{
     width: 100%;
+    height: 100px;
 }
-
-.align{
-    padding: 30px;
-}
-.check
-{
-    position:absolute;
-    margin: 10px;
-}
-
-.main-button{
+.second-button{
     background-color: orange;
-    height: 30px;
-    width: 100px;
-    color:white;
-    font-weight: 300px;
-    border: none;
-    padding-left: 10px;
-    position:relative;
-    left: 230px;
-    
+    padding:10px;
+    border-radius: 10px;
+    margin-left: 60%;
 }
