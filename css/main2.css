@@ -470,3 +470,111 @@ td,th{
 table{
   border-collapse: collapse;
 }
+
+.form-background{
+  background-color: black;
+  padding:30px;
+  width: 80%;
+  max-width:600px;
+  margin:auto;
+}
+
+.contact{
+  width:80%;
+  max-width:600px;
+  padding:3px;
+  background-color: white;
+  display: block;
+  margin-left: auto;
+  margin-right:auto;
+  border-radius: 10px;
+}
+.form-input{
+  width:100%;
+  padding:10px;
+  font-size:20px;
+  border:1px solid black;
+  border-radius:5px;
+}
+
+.w-50{
+  width:50%;
+  float:left;
+  padding:10px;
+}
+
+.w-100{
+  width:100%;
+  padding:10px;
+}
+
+input[type=email]{
+  width: 90%;
+  height: 30px;
+}
+
+textarea{
+  width: 100%;
+  height: 100px;
+}
+.second-button{
+  background-color: orange;
+  padding:10px;
+  border-radius: 10px;
+  margin-left: 60%;
+}
+
+.form-background2{
+  background-color: lightblue;
+  width:80%;
+  max-width: 600px;
+  padding:30px;
+  margin:auto;
+  border-radius: 5px;
+}
+
+table{
+  width: 100%;
+  border-top: 1px solid blue;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  
+}
+th, td {
+  border-bottom: 1px solid blue;
+  padding: 10px;
+}
+.cam{
+  width: 100px;
+}
+.third-button{
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  vertical-align: middle;
+  margin-left: 150px;
+}
+.btn{
+  padding:15px;
+  font-size:20px;
+  border:none;
+  border-radius: 10px;
+  background-color: coral;
+  color:white;
+  /* 커서변경 */
+  cursor:pointer;
+}
+/* 마우스 올릴때 스타일은 :hover 마우스를 여기에 가져다댔을때 어떤 스타일을 줄지 알려주는 것 */
+.btn:hover{ /*btn에 마우스 올리면 */
+  background-color: chocolate; /*이렇게 바꿔주세요*/
+}
+.btn:active{ /*클릭 중 스타일은 active*/
+   background-color: brown;
+}
+/* 커서찍혀있을때 스타일은 :focus */
+.btn:focus{
+  background-color: grey;
+}
