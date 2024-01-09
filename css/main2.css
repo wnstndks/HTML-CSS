@@ -556,6 +556,16 @@ th, td {
   border-radius: 10px;
   vertical-align: middle;
   margin-left: 150px;
+  cursor:pointer;
+}
+.third-button:hover{
+  background-color: aqua;
+}
+.third-button:active{
+  background-color: azure;
+}
+.third-button:focus{
+  background-color: gray;
 }
 .btn{
   padding:15px;
@@ -567,6 +577,7 @@ th, td {
   /* 커서변경 */
   cursor:pointer;
 }
+/*pseudo-class로 인터랙티브 버튼 만들기 button, input, a 태그에 많이 씀 */
 /* 마우스 올릴때 스타일은 :hover 마우스를 여기에 가져다댔을때 어떤 스타일을 줄지 알려주는 것 */
 .btn:hover{ /*btn에 마우스 올리면 */
   background-color: chocolate; /*이렇게 바꿔주세요*/
@@ -577,4 +588,37 @@ th, td {
 /* 커서찍혀있을때 스타일은 :focus */
 .btn:focus{
   background-color: grey;
+}
+
+/* hover, focus, active 넣을때는 순서가 중요하다 */
+
+/* a태그에 방문전 링크스타일링은 link,
+방문 후 링크 스타일링은 :visited */
+
+
+/* 만들어두면 편한 Utility class
+먼저 이 css파일위에 이걸 먼저 만들어놓고 나중에 부착하기,
+스타일 한 두개만 들어있는 class */
+.f-small{
+  font-size:12px;
+}
+.f-mid{
+  font-size:16px;
+}
+.f-lg{
+  font-size:20px;
+}
+
+.main-btn{
+  padding: 15px;
+  font-size:20px;
+  border:none;
+  cursor:pointer;
+}
+
+.bg-red{
+  background:red;
+}
+.bg-blue{
+  background-color: blue;
 }
