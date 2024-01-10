@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="/css/main2.css" rel="stylesheet">
 </head>
+
 <body>
+    <!-- div박스를 가로로 쉽게 배치할수 있는 속성->display: flex
+    <div class="flex-container">
+        <div class="flex-item" style="flex-grow: 1;">1</div>
+        박스크기를 비율로 설정가능
+        <div class="flex-item" style="flex-grow: 2;">2</div>
+        <div class="flex-item">3</div>
+    </div> -->
+    <!-- nav 태그는 의미있는 div태그 -->
+    <div class="flex-logo">
+        <div class="flex-text" style="font-size: 40px; font-weight:900; text-align: left;">Musinsa</div>
+        <!-- 박스사이 띄우기 -->
+        <div style="flex-grow: 1;"></div>
+            <div class="flex-text" style="margin-right: 5px;">products</div>
+            <div class="flex-text">services</div>
+    </div>
+
+
     <div class="main-background">
         <h3 class="main-title">Buy Our Clothes</h4>
-        <p class="main-content">
-            국내 최고의 스파 브랜드 무신사
-            무신사는 21세기 런칭된 국내 옷의 방향성을 바꾼 기업이다.
-        </p>
-        <button class="main-button"><a href="https://musinsa.com">링크로 이동</a></button>
+            <p class="main-content">
+                국내 최고의 스파 브랜드 무신사
+                무신사는 21세기 런칭된 국내 옷의 방향성을 바꾼 기업이다.
+            </p>
+            <button class="main-button"><a href="https://musinsa.com">링크로 이동</a></button>
     </div>
     <div class="main-block">
         <h4 style="text-align: center;">How we design our clothes</h5>
-        <p style="text-align:center; font-weight: 500;">
-            Our clothing brand offers a distinct advantage by providing customers with high-quality garments at affordable prices. 
-            Leveraging our extensive network of factories and clothing experts allows us to maintain superior quality standards while keeping production costs competitive. 
-            This enables us to offer our clientele a unique combination of affordability and exceptional craftsmanship, ensuring they receive value-driven, well-crafted clothing items tailored to their preferences.
-        </p>
+            <p style="text-align:center; font-weight: 500;">
+                Our clothing brand offers a distinct advantage by providing customers with high-quality garments at
+                affordable prices.
+                Leveraging our extensive network of factories and clothing experts allows us to maintain superior
+                quality standards while keeping production costs competitive.
+                This enables us to offer our clientele a unique combination of affordability and exceptional
+                craftsmanship, ensuring they receive value-driven, well-crafted clothing items tailored to their
+                preferences.
+            </p>
     </div>
 
     <!-- <br>
@@ -66,8 +89,6 @@
             or
         <button type="submit">전송</button>
             =>전송버튼 만들수 있음 -->
-
-
-
 </body>
+
 </html>

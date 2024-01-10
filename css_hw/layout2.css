@@ -128,7 +128,8 @@ textarea{
     padding:30px;
     width: 80%;
     max-width:600px;
-    margin:auto;
+    margin: auto;
+    margin-top: 50px;
 }
 
 table{

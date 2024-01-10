@@ -622,3 +622,69 @@ th, td {
 .bg-blue{
   background-color: blue;
 }
+
+/* font가 이뻐야 웹페이지가 이쁨
+웹 폰트 첨부방법 -용량 줄이기 호환성잡기 트래픽절약 폰트 anti-aliasing */
+/* font-family는 페이지 방문자들의 pc에 굴림체가 설치되어있어야 이용가능 */
+/* 커스텀폰트 넣는법 */
+/* 한글폰트 사이즈는 너무 크기에 한두개만 쓰기
+용량을 줄이려면 .woff쓰기 */
+@font-face {
+  font-family: '이쁜폰트';
+  font-weight: 800;
+  /* font-weight를 여기서 줘야 이에 맞게 굵기 표시 예쁘게 가능 */
+  src: url('../font/NanumSquareR.woff');
+}
+
+body{
+  font-family: '이쁜폰','gulim','dotum','arial';
+}
+
+/* 폰트파일 호스팅해주는 google Fonts */
+/* 링크 태그를 통해서 하거나, css파일에 @import방식으로 하면됨- 트래픽 절약 가능 */
+
+/* 폰트가 약간 이상하게보이는 경우(깨져있는 경우)->부드럽게 처리하려면 회전시키기
+밑의 방식대로 
+*/
+
+ p,h4,h3,h2,h1,span{
+  transform: rotate(0.03deg);
+ }
+
+ /* 원래 가로로 배치하고 싶을 때는 float:left또는 inline-block을 사용했음 
+ 그러나, 한번에 쉽게 하는 방법이 display:flex임 ->가로로배치하고 싶은 부모박스에 display:flex를 주면됨
+ .flex-container{
+    display:flex; 
+    /* inlineblock과 테이블 요소를 합친것  */
+    /* 박스들 가운데 정렬 */
+    /* justify-content: center; */
+    /* flex 이용시 세로배치 */
+    /* flex-direction: column; */
+    /* width 크면 밑으로 보내고싶을때 */
+    /* flex-wrap:wrap; */
+    /* flex 이용시 상하정렬 */
+    /* height:500px;
+    align-items: center;
+    justify-content: center;
+ }
+ .flex-item{
+    width:100px;
+    height: 100px;
+    background-color: grey;
+    margin:5px;
+ } */
+
+ .flex-logo{
+  display:flex;
+  height: 50px;
+  /* 세로 정렬하기 */
+  align-items: center; 
+  background-color: orange;
+}
+
+.flex-text{
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  margin-right: 5px;;
+}
