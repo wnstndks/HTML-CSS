@@ -8,10 +8,12 @@
     <link href="/css/main2.css" rel="stylesheet">
     <!-- 반응형 사이트 만들려면 밑의 코드 필요함 -->
     <meta name="viewport" content="width=device-width ,initial-scale=1.0">
-<!-- font awesome -->
-<!-- cdn  방시글 이용한 라이브러리 설치, 복사 붙여넣기를 통해 라이브러리 설치,  -->
-<!-- 아이콘 쓰기 위해 필 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- font awesome -->
+    <!-- cdn  방시글 이용한 라이브러리 설치, 복사 붙여넣기를 통해 라이브러리 설치,  -->
+    <!-- 아이콘 쓰기 위해 필 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -123,6 +125,31 @@
                 <p>Iorem ipsum</p>
             </div>
         </div>
+    </div>
+
+    <!-- one way 애니메이션 만드는 step
+1. 시작 스타일 만들기
+2. 최종 스타일 만들기
+3. 언제 최종스타일로 변하는지
+4. transition으로 애니메이션 -->
+
+    <div class="shop-bg">
+        <div class="shop-container">
+            <div class="shop-item">
+                <!-- 최종스타일을 먼저 만드는 게 편함 -->
+                <div style="position: relative">
+                    <div class="overlay"></div>
+                    <img src="/html/images (1).jpg">
+                </div>
+            </div>
+            <div class="shop-item">
+                <img src="/html/images (2).jpg">
+            </div>
+            <div class="shop-item">
+                <img src="/html/a0f8fba97eb3bfdd9ed268d3d0083cfaed8c2fc668c18d5c6288e5f3bfb7.jpg">
+            </div>
+        </div>
+
     </div>
 
 </body>
