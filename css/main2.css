@@ -740,3 +740,24 @@ breakpoint는 4개 넘어가면 복잡*/
     display:block;
   }
 }
+
+/* 
+디버깅:css를 짜다가 내 의도와는 다르게 동작하는 경우 ->버그
+이런 버그를 해결하고 싶을때는 css파일을 오픈해서 찾아보아야함
+아니면, 크롬브라우저에서 내 사이트를 오픈해서 내가 원하는 요소 검사
+우선 적용중인 스타일을 맨 위에서 보여줌
+user agent stylesheet 브라우저 기본 스타일
+현재 선택된 html의 마진/패딩도 보여줌
+*/
+
+/* 아이콘 뒤에 배경 넣기 */
+.table-container i{
+  background-color: burlywood;
+  width:100px;
+  height:100px;
+  border-radius: 50px;
+  padding-top:25px;
+  box-sizing: border-box;
+  color: white;
+  margin-top: 20px;
+}
