@@ -634,7 +634,7 @@ th, td {
 }
 
 body{
-  font-family: '이쁜폰','gulim','dotum','arial';
+  font-family: '이쁜폰트','gulim','dotum','arial';
 }
 
 /* 폰트파일 호스팅해주는 google Fonts */
@@ -795,22 +795,24 @@ user agent stylesheet 브라우저 기본 스타일
   opacity: 1;
 }
 
-.overlay2{
-  position: absolute;
-  width: 100%;;
-  height: 50%;
-  background: rgba(0,0,0,0.5);
-  opacity:0;
-  bottom:0;
-  /* transition 위에 있는 스타일이 변하면 1초동안 서서히 변경하게 */
-  transition: opacity 1s, bottom 1s;
-  transition-timing-function: cubic-bezier();
+.overlay-black{
+  width:100%;
+  height:100%;
+  background-color: rgba(0,0,0,0.3);
+  margin-top: 100%;
+  transition: all 1s;
   color:white;
-}
-/* 언제 최종으로 변할지 작성 */
-.overlay2:hover{
-  opacity: 1;
-  animation: overlay 1s;  
+  font-family: '이쁜폰트';
 }
 
+.overlay-wrap{
+  position: absolute;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
 
+.overlay-wrap:hover .overlay-black{
+  margin-top: 50%;
+
+}

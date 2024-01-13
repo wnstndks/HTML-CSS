@@ -144,16 +144,34 @@
             </div>
             <div class="shop-item">
                 <div style="position: relative">
-                    <div class="overlay2">
-                        <h1>$60%</h4>
-                        <p>인기상품</p>
+                    <div class="overlay-wrap">
+                        <div class="overlay-black">
+                            <h1>$60%</h1>
+                            <p>인기상품</p>
+                        </div>
                     </div>
                     <img src="/html/images (2).jpg">
                 </div>
             </div>
             <div class="shop-item">
+                <!-- html 구조도 생각해야함
+                이미지 위에 div 박스 올려서 구현을 한것
+            이 레이아웃은 적합 x 마우스를 올리면 이미지에 마우스를 올리면 위에 있는 .overlay 박스는 안됨
+            내 위에 있는 태그 선택 불가능 내 자식 html을 선택하기 위한 것
+        여기에 쓸수 있는 셀렉터가 없기에 불가능 형제 셀렉터만 가능,
+    +셀렉터는 내 아래 있는 태그 선택할때는 가능, 형제란 나란히 있는 html을 형제 관계라고 함
+    만약에 마우스 영역을 overlay에 hover중 밑으로 내려가든가 정지하던가 할것
+    원하던 레이아웃 못만듬
+    -->
                 <div style="position: relative">
-                <img src="/html/a0f8fba97eb3bfdd9ed268d3d0083cfaed8c2fc668c18d5c6288e5f3bfb7.jpg">
+                <!-- 오버레이를 감싸는 박스 태그 하나 만드는 것 -->
+                    <!-- 이 박스는 이미지 위에 존재하는 그러니까 붕 뜨는 
+                            그런 투명한 박스, 이 투명한 박스에 마우스를 올리면 안에 있는 까만 박스가 밑에서부터 위로 올라오게 만들기
+                    -->
+                    <div class="overlay-wrap">
+                        <div class="overlay"></div>
+                    </div>
+                    <img src="/html/a0f8fba97eb3bfdd9ed268d3d0083cfaed8c2fc668c18d5c6288e5f3bfb7.jpg">
                 </div>
             </div>
         </div>
