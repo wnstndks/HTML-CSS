@@ -816,3 +816,22 @@ user agent stylesheet 브라우저 기본 스타일
   margin-top: 50%;
 
 }
+
+.overlay-wrap2{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.overlay-black2{
+  height: 50%;
+  width: 100%;
+  background-color: black;
+  margin-top: 100%;
+  transition: all 1s;
+}
+
+.overlay-wrap2:hover .overlay-black2{
+  margin-top: 50%;
+}
