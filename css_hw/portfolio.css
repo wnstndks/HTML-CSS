@@ -1,0 +1,21 @@
+body{
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.landing-background{
+    background: linear-gradient(to bottom, blue, purple);
+    width: 100%;
+    color:white;
+}
+
+
+.first-message{
+    margin:auto;
+}
+
+.main-img{
+    width:30%;
+    margin: auto;
+    
+}
