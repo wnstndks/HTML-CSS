@@ -3,19 +3,38 @@ body{
     background-color: white;
 }
 
-.landing-background{
-    background: linear-gradient(to bottom, blue, purple);
+.landing-background {
+    background: linear-gradient(to bottom, #003A88, #7B6AB0);
     width: 100%;
-    color:white;
-}
+    height: 500px;
+    color: white;
+    display: flex;
+    justify-content: space-between; /* 이미지와 텍스트 간의 간격을 최대화 */
+    padding: 20px; /* 예시로 추가한 패딩 */
+  }
+
+  .main-img{
+    background-size: cover;
+  }
+
+  .landing-background > .first-message .main-img{
+    margin:30px;
+  }
 
 
-.first-message{
-    margin:auto;
-}
 
-.main-img{
-    width:30%;
-    margin: auto;
-    
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
