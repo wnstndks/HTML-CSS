@@ -1,4 +1,4 @@
-body{
+body {
     box-sizing: border-box;
     background-color: white;
 }
@@ -9,32 +9,58 @@ body{
     height: 500px;
     color: white;
     display: flex;
-    justify-content: space-between; /* 이미지와 텍스트 간의 간격을 최대화 */
-    padding: 20px; /* 예시로 추가한 패딩 */
-  }
+    justify-content: space-between;
+    /* 이미지와 텍스트 간의 간격을 최대화 */
+    padding: 20px;
+    /* 예시로 추가한 패딩 */
+}
 
-  .main-img{
+.main-img {
     background-size: cover;
-  }
+}
 
-  .landing-background > .first-message .main-img{
-    margin:30px;
-  }
+.landing-background>.first-message .main-img {
+    margin: 30px;
+}
 
+.perfect-theme {
+    text-align: center;
+    justify-content: center;
+    margin: 50px;
+}
 
+.offer-background {
+    background-color: #4B6BB6;
+    width: 100%;
+    height: 500px;
+    color: white;
+    text-align: center;
+}
 
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2개의 열 */
+    gap: 10px; /* 이미지 사이의 간격 조절 */
+    width:80%;
+    justify-content: center;
+    top: -40px;
+    left:0;
+    right:0;
+    margin: auto;
 
+}
 
+/* 각 이미지 스타일 */
+.image-box {
+    overflow: hidden; /* 이미지를 부모 요소 내에서 숨깁니다. */
+    border-radius: 8px; /* 이미지 모서리를 둥글게 만듭니다. */
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.image-box img {
+    width: 100%; /* 부모 요소에 맞게 이미지 크기 조절 */
+    height: auto; /* 비율 유지 */
+    display: block; /* 이미지 간격을 고려하여 inline 속성 제거 */
+    justify-content: space-between;
+    align-items: center;
+}
 
