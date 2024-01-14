@@ -1,26 +1,22 @@
 body {
     box-sizing: border-box;
-    background-color: white;
+    margin:0;
 }
 
 .landing-background {
     background: linear-gradient(to bottom, #003A88, #7B6AB0);
-    width: 100%;
+    width: 100vw;
     height: 500px;
     color: white;
     display: flex;
     justify-content: space-between;
-    /* 이미지와 텍스트 간의 간격을 최대화 */
-    padding: 20px;
-    /* 예시로 추가한 패딩 */
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .main-img {
     background-size: cover;
-}
-
-.landing-background>.first-message .main-img {
-    margin: 30px;
 }
 
 .perfect-theme {
@@ -31,29 +27,25 @@ body {
 
 .offer-background {
     background-color: #4B6BB6;
-    width: 100%;
+    width: 100vw;
     height: 500px;
     color: white;
     text-align: center;
+    padding:0px;
+}
+
+.offer-background h3, p{
+    margin:0px;
 }
 
 .img-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2개의 열 */
-    gap: 10px; /* 이미지 사이의 간격 조절 */
-    width:80%;
-    justify-content: center;
-    top: -40px;
+    width:80vw;
     left:0;
     right:0;
     margin: auto;
 
-}
-
-/* 각 이미지 스타일 */
-.image-box {
-    overflow: hidden; /* 이미지를 부모 요소 내에서 숨깁니다. */
-    border-radius: 8px; /* 이미지 모서리를 둥글게 만듭니다. */
 }
 
 .image-box img {
