@@ -1,24 +1,70 @@
 body {
-    box-sizing: border-box;
     margin:0;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+h1{
+    font-size:30px;
+}
+
+h4{
+    font-size:22px;
 }
 
 .landing-background {
     background: linear-gradient(to bottom, #003A88, #7B6AB0);
-    width: 100vw;
-    height: 500px;
+    height: 550px;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    padding:20px;
 }
 
-.main-img {
-    background-size: cover;
+.landing-container{
+    max-width:1200px;
+    margin:auto;
 }
 
+.landing-text{
+    float:left;
+    margin-top:50px;
+}
+
+.landing-img{
+    width:400px;
+    float:right;
+    margin-top:95px;
+}
+
+.btn {
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .btn-black {
+    background: #444;
+    color: white;
+  }
+ 
+  @media screen and (max-width : 992px) {
+    .main-iphone {
+      width: 260px;
+      display: block;
+      float: none;
+      margin: auto;
+      margin-top: 42px;
+    }
+    .main-text {
+      float: none;
+      margin-top: 50px;
+      text-align: center;
+    }
+  }
+  
 .perfect-theme {
     text-align: center;
     justify-content: center;
@@ -26,45 +72,33 @@ body {
 }
 
 .offer-background {
+    background-size:cover;
     background-color: #4B6BB6;
-    width: 100vw;
-    height: 500px;
+    width: 100%;
+    height: 300px;
     color: white;
     text-align: center;
     padding:0px;
     position: absolute;
+}
+.offer-background p{
+    margin-top: 20px;
 }
 
 .offer-background h3, p{
     margin:0px;
 }
 
-.img-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2개의 열 */
-    width:80vw;
-    left:0;
-    right:0;
-    margin: auto;
-
-}
-
-.image-box img {
-    width: 100%; /* 부모 요소에 맞게 이미지 크기 조절 */
-    height: auto; /* 비율 유지 */
-    display: block; /* 이미지 간격을 고려하여 inline 속성 제거 */
-    justify-content: space-between;
-    align-items: center;
-}
-
 .icon-container{
-    margin:50px;
     display:flex;
-    width:80%;
     position: relative;
-    left:0;
-    right: 0;
-    justify-content: center;
+    width:100vh;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.box-container{
+    margin-left: 30px;
 }
 
 .icon-container i{
@@ -77,3 +111,30 @@ body {
     color: #4B6BB6;
     margin-top: 20px;
   }
+
+
+.img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2개의 열 */
+    left:0;
+    right:0;
+}
+
+.user-wrap{
+    position: relative;
+}
+
+
+.user-img {
+    width: 100%; /* 부모 요소에 맞게 이미지 크기 조절 */
+    height: auto; /* 비율 유지 */
+    display: block; /* 이미지 간격을 고려하여 inline 속성 제거 */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-text{
+    position:absolute;
+    left:30%;
+    color:black;
+}
