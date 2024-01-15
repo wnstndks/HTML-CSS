@@ -1,40 +1,40 @@
 body {
-    margin:0;
+    margin: 0;
 }
 
-div{
+div {
     box-sizing: border-box;
 }
 
-h1{
-    font-size:30px;
+h1 {
+    font-size: 30px;
 }
 
-h4{
-    font-size:22px;
+h4 {
+    font-size: 22px;
 }
 
 .landing-background {
     background: linear-gradient(to bottom, #003A88, #7B6AB0);
     height: 550px;
     color: white;
-    padding:20px;
+    padding: 20px;
 }
 
-.landing-container{
-    max-width:1200px;
-    margin:auto;
+.landing-container {
+    max-width: 1200px;
+    margin: auto;
 }
 
-.landing-text{
-    float:left;
-    margin-top:50px;
+.landing-text {
+    float: left;
+    margin-top: 50px;
 }
 
-.landing-img{
-    width:400px;
-    float:right;
-    margin-top:95px;
+.landing-img {
+    width: 400px;
+    float: right;
+    margin-top: 95px;
 }
 
 .btn {
@@ -44,97 +44,94 @@ h4{
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  .btn-black {
+    margin-top:20px;
+}
+
+.btn-black {
     background: #444;
     color: white;
-  }
- 
-  @media screen and (max-width : 992px) {
+}
+
+@media screen and (max-width : 992px) {
     .main-iphone {
-      width: 260px;
-      display: block;
-      float: none;
-      margin: auto;
-      margin-top: 42px;
+        width: 260px;
+        display: block;
+        float: none;
+        margin: auto;
+        margin-top: 42px;
     }
+
     .main-text {
-      float: none;
-      margin-top: 50px;
-      text-align: center;
+        float: none;
+        margin-top: 50px;
+        text-align: center;
     }
-  }
-  
+}
+
 .perfect-theme {
     text-align: center;
     justify-content: center;
     margin: 50px;
 }
 
-.offer-background {
-    background-size:cover;
-    background-color: #4B6BB6;
+/*큰 레이아웃*/
+.service {
+    background-color: #4e61c0;
     width: 100%;
-    height: 300px;
     color: white;
     text-align: center;
-    padding:0px;
-    position: absolute;
-}
-.offer-background p{
-    margin-top: 20px;
-}
-
-.offer-background h3, p{
-    margin:0px;
-}
-
-.icon-container{
-    display:flex;
-    position: relative;
-    width:100vh;
-    margin: 0 auto;
-    margin-top: 10px;
-}
-
-.box-container{
-    margin-left: 30px;
-}
-
-.icon-container i{
-    background-color: white;
-    width:100px;
-    height:100px;
-    border-radius: 50px;
-    padding-top:25px;
+    padding: 60px 30px 50px 30px;
+  }
+  .service-items {
+    display: flex;
+  }
+  .service-items div {
+    width: 25%;
+  }
+  
+  /*나머지 쓸데없는 디자인들*/
+  .service h5 {
+    margin-bottom: 0px;
+  }
+  .service-icon {
+    background: white;
+    color: #4e61c0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
     box-sizing: border-box;
-    color: #4B6BB6;
-    margin-top: 20px;
+    padding: 15px;
   }
 
 
-.img-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2개의 열 */
-    left:0;
-    right:0;
+.portfolio-container {
+    text-align: left;
+    max-width: 1200px;
+    margin: auto;
 }
 
-.user-wrap{
-    position: relative;
+.img-box{
+    float:left;
+    width:50%;
+    height:350px;
+    background-size:cover;
 }
 
-
-.user-img {
-    width: 100%; /* 부모 요소에 맞게 이미지 크기 조절 */
-    height: auto; /* 비율 유지 */
-    display: block; /* 이미지 간격을 고려하여 inline 속성 제거 */
-    justify-content: space-between;
-    align-items: center;
+.im1{
+    background-image: url(/html_hw/img/portfolio-1.jpg);
+}
+.im2{
+    background-image: url(/html_hw/img/portfolio-2.jpg);
+}
+.im3{
+    background-image: url(/html_hw/img/portfolio-3.jpg);
+    }
+.im4{
+    background-image: url(/html_hw/img/portfolio-4.jpg);
 }
 
-.user-text{
-    position:absolute;
-    left:30%;
-    color:black;
+.portfolio-text{
+    color:white;
+    padding: 100px;
+    width: 100%;
 }
