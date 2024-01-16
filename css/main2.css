@@ -835,3 +835,45 @@ user agent stylesheet 브라우저 기본 스타일
 .overlay-wrap2:hover .overlay-black2{
   margin-top: 50%;
 }
+
+
+/* 회전하고 싶을 떄 transform: rotate(10deg)
+  좌표 이동하고 싶을 때 transform:translateX(10px) 또는 translateY
+  애니메이션 줄 경우 margin보다 부드럽기 때문 
+  크기 변화주고 싶을 떈 scale()*/
+.ani-text{
+  /* 마우스를 올리면 왔다갔다 할수 있게 만들기
+  transition은 a-> b상태만 가능
+  따라서 a->b->c같은 복잡한 애니메이션 정의는 @keyframes */
+  text-align:center;
+}
+
+.ani-text:hover{
+  animation-name:왔다갔다;
+  animation-duration:1s;
+}
+
+@keyframes 왔다갔다{
+  0%{
+    /* 애니메이션이 0% 진행할 시 적용할 스타일*/
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translate(-100px);
+  }
+  75%{
+    transform: translateX(100px);
+  }
+  100%{
+    transform:translateX(100px);
+  }
+}
+
+/* 뭐든 성능과 구현을 같이 생각해야함 */
+/* 
+  브라우저가 그림그리는 순서
+   1. render tree 만들기 - css정리한 참고자료임
+   2.layout잡기 - 네모네모 박스부터 그림 어디 위치하는지 , width height margin padding
+   3.paint하기 - 픽셀에 색칠함 color
+   4.composite처리 - transform, opacity 있으면 처리
+*/
