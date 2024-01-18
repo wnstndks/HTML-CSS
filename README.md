@@ -1,2 +1,3 @@
-### 😎 Here is for HTML/CSS
-![image](https://github.com/wnstndks/HTML-CSS/assets/125172335/764f6567-90b3-4a25-876a-9eb47a340da2)
+### 😎 Here is for HTML/CSS/JS
+![image](https://github.com/wnstndks/HTML-CSS/assets/125172335/324e8fa6-2ba1-437e-b49b-4c5f62683472)
+
