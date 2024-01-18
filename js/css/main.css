@@ -1,0 +1,17 @@
+body{
+    margin:0
+}
+div{
+    box-sizing: border-box;
+}
+
+.alert-box{
+    background-color: skyblue;
+    padding:20px;
+    color:white;
+    border-radius: 5px;
+
+    /* css로 display를 숨기고 싶을때 
+    보여주고 싶을 때는 display : block */
+    display:none;
+}

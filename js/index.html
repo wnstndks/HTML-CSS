@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="/js/css/main.css" rel="stylesheet">
 </head>
 <body>
     <h1 id="hello">안녕하세요</h1>
@@ -16,6 +17,16 @@
         document.getElementById('hello').style.fontSize='16px';
         document.getElementById('hi').innerHTML='고수임'
     </script>
+
+    <!-- UI 만드는 스텝 
+    1. HTML/CSS로 미리 디자인
+    2. 필요할 때 보여달라고 코드짬(자바스크립트로)-->
+    
+    <div class="alert-box" id="alert">
+        알림창임
+        <button onclick="document.getElementById('alert').style.display='none'">닫기</button>
+    </div>
+    <button onclick="document.getElementById('alert').style.display='block';">버튼</button>
 
 
 
