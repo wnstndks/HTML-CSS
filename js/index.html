@@ -23,12 +23,32 @@
     2. 필요할 때 보여달라고 코드짬(자바스크립트로)-->
     
     <div class="alert-box" id="alert">
-        알림창임
-        <button onclick="document.getElementById('alert').style.display='none'">닫기</button>
+        <p id='title'>알림창임</p>
+        <button onclick="openAlert('none')">닫기</button>
     </div>
-    <button onclick="document.getElementById('alert').style.display='block';">버튼</button>
+    <button onclick="openAlert('block')">버튼</button>
+    <div></div>
 
+    <button onclick="openPersonal('아이디를 입력하세요')">버튼1</button>
+    <button onclick="openPersonal('비번을 입력하세요')">버튼2</button>
+    
+    <!-- 자바스크립트는 조작할 html 하단에 코드짜야 잘 -->
+    <script>
+        // 자바스크립트 function 문법 - 긴코드 축약하고 싶을때 사용
+        // 비슷한 코드들이 많을 때 파라미터 사용
+        // 복잡하면 한글부터 짜고 코드로 옮기
+        function openAlert(파라미터){
+            document.getElementById('alert').style.display=파라미터;
+        }
+        function closeAlert(){
+            document.getElementById('alert').style.display='none';
+        }
 
+        function openPersonal(파라미터){
+            document.getElementById('title').innerHTML=파라미터;
+            document.getElementById('alert').style.display='block'
+        }
+    </script>
 
 
 </body>
