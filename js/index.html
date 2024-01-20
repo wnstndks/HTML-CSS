@@ -24,7 +24,7 @@
     
     <div class="alert-box" id="alert">
         <p id='title'>알림창임</p>
-        <button onclick="openAlert('none')">닫기</button>
+        <button id="close">닫기</button>
     </div>
     <button onclick="openAlert('block')">버튼</button>
     <div></div>
@@ -48,6 +48,16 @@
             document.getElementById('title').innerHTML=파라미터;
             document.getElementById('alert').style.display='block'
         }
+
+        // onclick넣고 뭘하는거 자체가 너무 김 -> addEventListener() 사용시 onclick 필요 없음
+        document.getElementById('close').addEventListener('click',function(){
+            // 위 아이디를 가지고 잇는 요소를 클릭하면, 이 함수 내 코드를 실행해준다.
+            document.getElementById('alert').style.display='none';
+            // event가 뭐냐면? 클릭 키입력 스크롤 드래그 등이 다 이벤트 -> 유저들이 조작하는 것들
+            // ->event 감지하고 싶으면 addEventListener('이벤트명')
+
+            // 함수 파라미터자리에 콜백함수가 들어가는데 자바스크립트에서는 뭔가 순차적으로 작성하고 싶을때 콜백함수를 사용
+        })
     </script>
 
 
