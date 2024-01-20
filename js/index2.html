@@ -12,13 +12,13 @@
 
 <body>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-<!-- 위의  jquery 설치한 곳 밑에서부터 jquery문법 사용 가능,  외부 라이브러리는 body 끝나기 전에 넣는 것 권장 -->
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <!-- 위의  jquery 설치한 곳 밑에서부터 jquery문법 사용 가능,  외부 라이브러리는 body 끝나기 전에 넣는 것 권장 -->
 
 
     <!-- 1.미리 서브메뉴부터 디자인 
          2. 버튼 누르면 보여달라고 JS - 
-         클래스를 탈부착식으로도 구현가능 => 애니메이션 추가 쉬움, 나중에 재사용 편-->
+         클래스를 탈부착식으로도 구현가능 => 애니메이션 추가 쉬움, 나중에 재사용 편리-->
 
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
@@ -54,8 +54,57 @@
         })
     </script> -->
 
+    <button id="login">로그인</button>
+
+    <!--  모달창 안에 <form>만들기  form은 서버로 유저정보 전송하려고 쓰는 것임-->
+
+    <div class="black-bg">
+        <div class="white-bg">
+            <h4>로그인하세요</h4>
+            <form action="success.html">
+                <div class="my-3">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="my-3">
+                    <input type="password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">전송</button>
+                <button type="button" class="btn btn-danger" id="close">닫기</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // 전송버튼 누르면 저기 input에 입력한 값이 공백이면 알림창 띄워주세요~
+        // 조건문 쓰는 법 if( 조건) {조건이 참일 때 실행할 코드} else{위 조건이 참이 아닐때 실행할 코}
+
+        // input에 있는 값 가져오기
+        // document.querySelectorAll('.form-control')[0].value;
+
+        $('.btn.btn-primary').on('click', function () {
+
+            if (document.querySelectorAll('.form-control')[0].value=='') {
+                alert('입력 필드를 모두 채워주세요.');
+            } 
+        });
+    </script>
 
 
+    <script>
+
+        // 로그인 버튼 누르면 show-modal 클래스를 저기 붙여주셈
+        $('#login').on('click', function () {
+            $('.black-bg').addClass('show-modal');
+        })
+
+        $('#close').on('click', function () {
+            $('.black-bg').removeClass('show-modal');
+        })
+
+        // document.querySelector('black-bg').classList.add('show-modal')
+
+
+    </script>
 
     <!-- <script>
 
@@ -86,7 +135,12 @@
     </script> -->
 
 
- 
+    <!-- UI에 애니메이션 추가하려면 가능하면 css만으로 처리하는게 좋음
+    one-way UI 애니메이션 만드는 법 A상태-> B상태 
+
+    1.시작스타일 2.최종스타일을 class 로 만들어놓고 3. 원할때 최종스타일로 변하라고 코드짬 4.transition 추가 -->
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
