@@ -15,3 +15,11 @@ div{
     보여주고 싶을 때는 display : block */
     display:none;
 }
+
+.list-group{
+    display:none;
+}
+/* css는 하단에 적을수록 우선적용 */
+.show{
+    display: block;
+}
