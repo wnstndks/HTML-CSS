@@ -49,3 +49,8 @@ div{
     opacity:1;
   }
 
+
+  .dark{
+    background: black;
+    color:white;
+  }
