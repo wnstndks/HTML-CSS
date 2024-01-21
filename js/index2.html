@@ -83,11 +83,24 @@
 
         $('.btn.btn-primary').on('click', function () {
 
-            if (document.querySelectorAll('.form-control')[0].value=='') {
+            if (document.querySelectorAll('.form-control')[0].value == '' || document.querySelectorAll('.form-control')[1].value == '') {
                 alert('입력 필드를 모두 채워주세요.');
-            } 
+            }
+
+            if (document.querySelectorAll('.form-control')[1].value.length < 6) {
+                alert('더 길게 입력하쇼')
+            }
         });
+
+        // 조건식을 연달아 쓰고 싶으면 else if
     </script>
+
+    <!-- 
+조건문에서 엄격한 비교는 ===, 느슨한 비교는 == 
+엄격한 비교는 타입까지 같아야 같다고 해주고 느슨한 비교는 타입은 달라도 상관없음
+if문 안에는 true/false, 1/0를 넣어주어야 잘 작동함
+조건 2개 이상 동시에 비교 -> &&, || 연산자
+-->
 
 
     <script>
@@ -140,6 +153,17 @@
 
     1.시작스타일 2.최종스타일을 class 로 만들어놓고 3. 원할때 최종스타일로 변하라고 코드짬 4.transition 추가 -->
 
+
+    <!-- input 찾기 -->
+    <!-- input태그에서 일어나는 input 이벤트 
+        -> 여기 유저가 입력한 값이 변할 때 실행됨 
+        change 이벤트는 input에 입력한 값이 바뀌고 포커스를 잃을 때 생성
+    -->
+    <script>
+        document.getElementById('email').addEventListener('input', function () {
+            console.log('안녕')
+        })
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
