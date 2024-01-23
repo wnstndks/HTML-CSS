@@ -123,6 +123,52 @@
 
     </script>
 
+    <script>
+        // function 문법
+        // 1. 긴코드를 축약해서 쓸수 있음
+        // 2. 파라미터 추가 기능
+        // 3. return -> 함수 쓰고 그 자리에 뭔가 뱉고 싶을떄 사용
+
+        function 함수(){
+
+            return 123
+            // return 아무거나 가능함, 함수종료 기능도 가지고 있음
+            // return의 용도 : 자료를 넣으면 다른 자료가 나오는 변환기를 만들고 싶을때 사
+        }
+
+        var 변수 = 함수();
+        console.log(변수);
+
+        // 소수점 있는 숫자연산시 주의점
+        // 소수점 반올림하는 법
+        // 숫자.toFixed(몇자)
+        function vat(){
+            var num = (a*1.1).toFixed(1);
+            // toFixed 를 붙이면 문자로 변환됨 따라서
+            return parseFloat(num) 
+            // 다시 숫자로 변환
+        }
+
+        function 부가세(상품가격){
+            return 상품가격 * 0.1
+        }
+
+        function 함수1(분, 초){
+            return (분*60 + 초) * 1000 +'ms'
+        }
+        
+        function 할인(가격, 맞다아니다){
+            var 할인된가격=0;
+
+            if(맞다아니다==true){
+                할인된가격= 가격*0.9 - 1.5;
+            }else{
+                할인된가격=가격*0.9;
+            }
+            return 할인된가격
+        }
+
+    </script>
 
 
 

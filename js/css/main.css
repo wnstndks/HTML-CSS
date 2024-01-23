@@ -1,3 +1,7 @@
+/* :root {
+   스크롤바 부트스트랩 부드럽게 취소하기 
+  scroll-behavior: auto;
+} */
 body {
   margin: 0
 }
@@ -72,3 +76,4 @@ div {
 .slide-box img{
   width:100px;
 }
+
