@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="/js/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand">Navbar</span>
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+
+    <script>
+        // html페이지가 스크롤될때마다 함수 실행
+        window.addEventListener('scroll', function () {
+            console.log(window.scrollY); //얼마나 스크롤바 내렸는지 확인시켜주는 것
+            // scrollTo(x,y) ->원하는 위치로 강제로 스크롤하기, Bootstrap 설치시 스무스하게 가능
+            // scrollBy(x,y) 현재 위치로 부터 강제로 스크롤하기
+        });
+
+        $(window).on('scroll', function () {
+            $(window).scrollTop()
+            // 현재 스크롤바 이동
+        })
+
+    </script>
+
+    <ul class="list-group">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+    </ul>
+
+    <p class="hello">안녕</p>
+
+    <div class="main-bg">
+        <h4>Shirts on Sale</h4>
+        <button id="login" class="btn btn-danger">로그인</button>
+    </div>
+
+    <div class="height: 1000px"></div>
+
+    <div class="black-bg">
+        <div class="white-bg">
+            <h4>로그인하세요</h4>
+            <form action="success.html">
+                <div class="my-3">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="my-3">
+                    <input type="password" class="form-control" id="pw">
+                </div>
+                <button type="submit" class="btn btn-primary">전송</button>
+                <button type="button" class="btn btn-danger" id="close">닫기</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        $('.btn.btn-primary').on('click', function () {
+
+            if (document.querySelectorAll('.form-control')[0].value == '' || document.querySelectorAll('.form-control')[1].value == '') {
+                alert('입력 필드를 모두 채워주세요.');
+            }
+
+            if (document.querySelectorAll('.form-control')[1].value.length < 6) {
+                alert('더 길게 입력하쇼')
+            }
+
+
+        });
+    </script>
+
+    <script>
+        $('#login').on('click', function () {
+            $('.black-bg').addClass('show-modal');
+        })
+
+        $('#close').on('click', function () {
+            $('.black-bg').removeClass('show-modal');
+        })
+    </script>
+
+    <script>
+
+        document.querySelectorAll('.navbar-toggler')[0].addEventListener('click', function () {
+            document.querySelector('.list-group').classList.toggle('show');
+        })
+
+    </script>
+
+
+    <script>
+        document.getElementById('email').addEventListener('input', function () {
+            console.log('안녕')
+        });
+    </script>
+
+
+
+    <script>
+        $('form').on('submit', function (e) {
+
+            var 비번 = document.getElementById('pw').value;
+            if (/[A-Z]/.test(비번) == false) {
+                alert('대문자없는데요')
+            }
+
+        });
+    </script>
+
+    <div style="overflow: hidden;">
+        <div class="slide-container">
+            <div class="slide-box">
+                <img src="/html/images (1).jpg">
+                <p>1번사진</p>
+            </div>
+            <div class="slide-box">
+                <img src="/html/images (2).jpg">
+                <p>2번사진</p>
+            </div>
+            <div class="slide-box">
+                <img src="/html/images (1).jpg">
+                <p>3번사진</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
+    <button class="next">다음</button>
+    <button class="back">이전</button>
+
+
+
+    <script>
+        $('.slide-1').on('click', function () {
+            $('.slide-container').css('transform', 'translateX(0vw)');
+        });
+        $('.slide-2').on('click', function () {
+            $('.slide-container').css('transform', 'translateX(-100vw)');
+        });
+        $('.slide-3').on('click', function () {
+            $('.slide-container').css('transform', 'translateX(-200vw)');
+        });
+    </script>
+
+
+    <script>
+
+        var 지금사진 = 1;
+
+        $('.next').on('click', function () {
+            if (지금사진 == 1) {
+                $('.slide-container').css('transform', 'translateX(-100vw)');
+                지금사진++;
+            }
+            else if (지금사진 == 2) {
+                $('.slide-container').css('transform', 'translateX(-200vw)');
+                지금사진++;
+            }
+        })
+
+        $('.back').on('click', function () {
+            if (지금사진 == 2) {
+
+                $('.slide-container').css('transform', 'translateX(0vw)');
+                지금사진--;
+            }
+            else if (지금사진 == 3) {
+                $('.slide-container').css('transform', 'translateX(-100vw)');
+                지금사진--;
+            }
+        })
+
+    </script>
+
+    <!-- 회원약관  -->
+    <div class='lorem' style="width:200px; height: 100px; overflow-y: scroll;">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit
+        debitis at, laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, eligendi quae consectetur
+        praesentium exercitationem.
+    </div>
+
+    <script>
+        // 박스의 스크롤바 끝까지 내리면 alert() 띄우기
+        // div의 스크롤바 내린 양 == div의 실제 높이
+
+        $('.lorem').on('scroll', function () {
+            // div 스크롤바 내린 높이는 셀렉터.scrollTop
+            var 스크롤양 = document.querySelector('.lorem').scrollTop
+        })
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
