@@ -10,17 +10,6 @@ div {
   box-sizing: border-box;
 }
 
-.navbar{
-  position: fixed;
-  width: 100%;
-  z-index: 5;
-}
-
-
-.navbar-brand{
-  font-size: 25px;
-
-}
 
 .alert-box {
   background-color: skyblue;
@@ -90,3 +79,14 @@ div {
 }
 
 
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+
+/* 스크롤바 내리면 25px로 되게하기 */
+.navbar-brand{
+  font-size: 25px;
+}

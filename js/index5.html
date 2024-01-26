@@ -16,7 +16,7 @@
 
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <span class="navbar-brand">Navbar</span>
+            <span class="navbar-brand">JSSHop</span>
             <button class="navbar-toggler" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -32,10 +32,12 @@
             // scrollBy(x,y) 현재 위치로 부터 강제로 스크롤하기
         });
 
+        // jquery방식
         $(window).on('scroll', function () {
             $(window).scrollTop()
             // 현재 스크롤바 이동
         })
+
 
     </script>
 
@@ -54,7 +56,7 @@
         <button id="login" class="btn btn-danger">로그인</button>
     </div>
 
-    <div class="height: 1000px"></div>
+    <div style="height: 1000px"></div>
 
     <div class="black-bg">
         <div class="white-bg">
@@ -107,11 +109,12 @@
     </script>
 
 
-    <script>
+    <!-- <script> 
         document.getElementById('email').addEventListener('input', function () {
             console.log('안녕')
         });
     </script>
+-->
 
 
 
