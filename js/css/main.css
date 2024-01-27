@@ -79,6 +79,8 @@ div {
 }
 
 
+/* 
+이거 하면 좀 이상해져서 고쳐야될듯
 .navbar{
   position: fixed;
   width: 100%;
@@ -86,7 +88,7 @@ div {
 }
 
 
-/* 스크롤바 내리면 25px로 되게하기 */
+/* 스크롤바 내리면 25px로 되게하기 
 .navbar-brand{
   font-size: 25px;
-}
+} */
