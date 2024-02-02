@@ -114,6 +114,37 @@
         </div>
     </div>
 
+    <script>
+        // 모달창을 클래스로 띄웠으면 닫을때도 클래스로 닫아야 한다 -> 일관성있게 코딩을 해야한다.
+        // + 자바스크립트 밑에 조작해야
+        
+        // 모든 브라우저는 이벤트 버블링(이벤트가 상위html로 퍼지는 현상)이 일어남
+
+
+        document.querySelector('.black-bg').addEventListener('click',function(e){
+
+            // 유용한 이벤트 관련함수들, function에 e를 넣으면 됨
+            // e.target; //유저가 실제로 누른 html 요소를 얘가 확인해줌
+            // e.currentTarget; //이벤트리스너 달린 곳 또는 this;
+            // e.preventDefault(); // 이벤트 기본동작 막아줌
+            // e.stopPropagation(); // 내 상위요소로 이벤트 버블링 막아줌
+            
+
+            console.log(e.target);
+            console.log($('.black-bg'));
+            
+            // 내가 실제로 누른게 까만배경이면 모달창 닫아주세요~
+            if ( e.target == document.querySelector('.black-bg') ) { //내가 실제로 누른거 == 까만배경
+                document.querySelector('.black-bg').classList.remove('show-modal');
+            }
+
+            // 이벤트 버블링이 일어날때는 이벤트 관련 함수들을 사용해야 
+        })
+
+
+    </script>
+
+
     <div style="height: 2000px;"></div>
     <script>
         $('.btn.btn-primary').on('click', function () {
