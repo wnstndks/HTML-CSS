@@ -1,7 +1,3 @@
-/* :root {
-   스크롤바 부트스트랩 부드럽게 취소하기 
-  scroll-behavior: auto;
-} */
 body {
   margin: 0
 }
@@ -10,6 +6,24 @@ div {
   box-sizing: border-box;
 }
 
+.list-group {
+  display: none;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+.navbar-brand {
+  font-size: 25px;
+}
+
+.main-bg {
+  padding: 100px 20px;
+  background: lightgrey;
+}
 
 .alert-box {
   background-color: skyblue;
@@ -22,9 +36,7 @@ div {
   display: none;
 }
 
-.list-group {
-  display: none;
-}
+
 
 /* css는 하단에 적을수록 우선적용 */
 .show {
@@ -67,28 +79,14 @@ div {
   /* vw - 브라우저폭 */
   width: 300vw;
   transition: all 1s;
-  /* transform: translateX(-100vw); 이게 최종화면 */ 
+  /* transform: translateX(-100vw); 이게 최종화면 */
 }
 
 .slide-box {
   width: 100vw;
   float: left;
 }
-.slide-box img{
-  width:100px;
+
+.slide-box img {
+  width: 100px;
 }
-
-
-/* 
-이거 하면 좀 이상해져서 고쳐야될듯
-.navbar{
-  position: fixed;
-  width: 100%;
-  z-index: 5;
-}
-
-
-/* 스크롤바 내리면 25px로 되게하기 
-.navbar-brand{
-  font-size: 25px;
-} */
