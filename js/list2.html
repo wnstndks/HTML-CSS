@@ -28,6 +28,14 @@
         </div>
     </div>
 
+    <div class="container my-3">
+        <button class="btn btn-danger" id='price'>가격순정렬</button>
+        <button class="btn btn-danger" id='sangpum'>상품명 가나다순 정렬</button>
+        <button class="btn btn-danger" id='yukman'>6만원 이하 상품만 보기</button>
+        <button class="btn btn-danger" id='return'>되돌리기</button>
+    </div>
+
+
     <script>
         function 함수(products) {
             products.forEach((a) => {
@@ -47,25 +55,119 @@
             { id: 2, price: 60000, title: 'Black Monastery' }
         ];
 
+        var products1 = Object.assign([], products);
+
+
+
+        //array 정렬하는 법
+        var 어레이 = [7, 3, 5, 2, 40];
+
+        // 문자정렬방법
+        어레이.sort();
+        console.log(어레이);
+
+        //숫자정렬방법
+        어레이.sort(function (a, b) {
+            return a - b
+        });
+        // a,b는 array 안의 자료, return 오른쪽이 양수면 a를 오른쪽으로, 음수면 b를 오른쪽으로
+        // console.log(어레이);
+        // 문자 가나다순 정렬
+        var 어레이2 = ['a', 'c', 'b']
+        // 어레이2.sort();
+        // 역순 정렬?
+        어레이2.sort(function (a, b) {
+            if (a < b) {
+                return 1;
+            }
+            if (a > b) {
+                return -1;
+            }
+            return 0;
+        });
+
+        // console.log(어레이2);
+
+
+        $('#price').click(function () {
+            products.sort(function (a, b) {
+                return a.price - b.price;
+            });
+            console.log(products);
+            $('.row').html('');
+            함수(products);
+
+        })
+
+        $('#sangpum').click(function () {
+            products.sort(function (a, b) {
+                if (a.title < b.title) {
+                    return 1;
+                }
+                else{
+                    return -1;
+                }
+                return 0;
+            });
+            console.log(products);
+            $('.row').html('');
+            함수(products);
+
+        })
+
+        $('#yukman').click(function () {
+            var newproducts=products.filter(function (a) {
+                return a.price<=60000;
+            });
+            console.log(newproducts);
+            $('.row').html('');
+            함수(newproducts);
+
+        })
+
+        $('#return').click(function () {
+            $('.row').html('');
+            함수(products1);
+        })
+
+
+
+        // 어레이에 붙일수 있는 유용한 함수
+        // array 자료 원하는 것만 필터하려면 .filter()
+        // var 새어레이 = 어레이.filter(function(a){
+        //     return 조건식 - 조건에 따른 정보만 남겨준다.
+        // })
+        // filter의 결과는 변수에 저장해서 써야한다.
+        // sort는 원본 변형 o, filter는 원본 변형 x
+        // array 자료 전부 변형하려면 .map() 
+        // var 새어레이 = 어레이.map(function(a){
+        //     return 조건식 - 조건에 따라 자료를 변형시킴
+        // })
+
+
+
 
         // 카드에 products에 대한 첫번째 정보를 담아서 html에 출력해보자
 
         함수(products);
     </script>
 
+
+
     <div class="container">
-        <button class="btn btn-danger">더보기</button>
+        <button class="btn btn-danger" id="more">더보기</button>
     </div>
+
 
     <script>
 
         var count = 0;
-        $('.btn').click(function () {
+        $('#more').click(function () {
             count += 1;
             if (count == 1) {
                 $.get('https://codingapple1.github.io/js/more1.json').done((data) => {
                     // 서버에서 받아온 데이터
-                    console.log(data);
+                    // console.log(data);
                     함수(data);
                 }).fail(function () {
                     console.log('실패함');
@@ -74,14 +176,14 @@
             if (count == 2) {
                 $.get('https://codingapple1.github.io/js/more2.json').done((data) => {
                     // 서버에서 받아온 데이터
-                    console.log(data);
+                    // console.log(data);
                     함수(data);
-                    $('.btn').css('display', 'none');
+                    $('#more').css('display', 'none');
                 }).fail(function () {
                     console.log('실패함');
                 });
-            } 
-            
+            }
+
 
 
         });
