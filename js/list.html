@@ -1,67 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap demo</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link href="/js/css/main.css" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-          integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-      </head>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="/js/css/main.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
 <body>
-    
-    <div class="card-group container">
-        <div class="card">
-          <img src="https://via.placeholder.com/600">
-          <div class="card-body">
-            <h5>Card title</h5>
-            <p>가격 : <span>70000</span></p>
-            <button class="btn btn-danger">주문하기</button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/600">
-          <div class="card-body">
-            <h5>Card title</h5>
-            <p>가격 : <span>70000</span></p>
-            <button class="btn btn-danger">주문하기</button>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://via.placeholder.com/600">
-          <div class="card-body">
-            <h5>Card title</h5>
-            <p>가격 : <span>70000</span></p>
-            <button class="btn btn-danger">주문하기</button>
-          </div>
-        </div>
+
+  <div class="card-group container">
+    <div class="card">
+      <img src="https://via.placeholder.com/600">
+      <div class="card-body">
+        <h5>Card title</h5>
+        <p>가격 : <span>70000</span></p>
+        <button class="btn btn-danger">주문하기</button>
       </div>
-      
-      <script>
-        var products = [
-          { id : 0, price : 70000, title : 'Blossom Dress' },
-          { id : 1, price : 50000, title : 'Springfield Shirt' },
-          { id : 2, price : 60000, title : 'Black Monastery' }
-        ];
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/600">
+      <div class="card-body">
+        <h5>Card title</h5>
+        <p>가격 : <span>70000</span></p>
+        <button class="btn btn-danger">주문하기</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/600">
+      <div class="card-body">
+        <h5>Card title</h5>
+        <p>가격 : <span>70000</span></p>
+        <button class="btn btn-danger">주문하기</button>
+      </div>
+    </div>
+  </div>
 
-        // products 내의 price와 title을 card의 가격과 card title에 넣으면 되네
-        for(var i=0;i<3;i++){
-            $('.card-body h5').eq(i).html(products[i].title);
-            $('.card-body span').eq(i).html(products[i].price);
-        }
-        // 자바스크립트에서 문자합치기는 '문자'+ ... 이런식으로 해주면 된다
-        // 문자 덧셈은 양 옆을 더해주는 것
-        // $('.card-body span').eq(i).html('가격:'+products[i].price);
-        // 문자 중간에 변수 쉽게넣고 싶으면, 예로 a='안녕', '문자문자' 문자a문자 이런식으로 그러면, 따옴표대신에 백틱을 넣어주면 된다
-        // `문자${a}문자`이렇게 해주면 된다
-      </script> 
+  <script>
+    var products = [
+      { id: 0, price: 70000, title: 'Blossom Dress' },
+      { id: 1, price: 50000, title: 'Springfield Shirt' },
+      { id: 2, price: 60000, title: 'Black Monastery' }
+    ];
+
+    // products 내의 price와 title을 card의 가격과 card title에 넣으면 되네
+    for (var i = 0; i < 3; i++) {
+      $('.card-body h5').eq(i).html(products[i].title);
+      $('.card-body span').eq(i).html(products[i].price);
+    }
+    // 자바스크립트에서 문자합치기는 '문자'+ ... 이런식으로 해주면 된다
+    // 문자 덧셈은 양 옆을 더해주는 것
+    // $('.card-body span').eq(i).html('가격:'+products[i].price);
+    // 문자 중간에 변수 쉽게넣고 싶으면, 예로 a='안녕', '문자문자' 문자a문자 이런식으로 그러면, 따옴표대신에 백틱을 넣어주면 된다
+    // `문자${a}문자`이렇게 해주면 된다
+  </script>
+
+  <!-- 
+        서버란? 데이터를 달라고 하면 데이터 보내주는 프로그램을 서버라고 함,
+        ex 네이버 웹툰 서버 => 유저가 웹툰을 달라하면 웹툰을 주는 프로그램
+           유투브 => 유저가 동영상 달라하면 동영상 달라하는 프로그램
+        
+        1.어떤 데이터인지 - 데이터의 url 
+        2.어떤 방법으로 요청할건지 - GET(서버에서 데이터를 읽을때)인지 POST(서버에 데이터를 보낼때)인지 잘 기재해야 데이터줌
+      -->
+  <!-- <form action="'/sddfasd" method="post"> 
+        post 요청하는 법
+      </form>
+      그러나 get/post 요청하면 브라우저 새로고침됨 ==> ajax는 새로고침없이 get,post 요청하는 기능
+      -->
+
+  <!-- ajax로 get 요청하는 방법 -->
+  <script>
+    $.get('https://codingapple1.github.io/price.json').done(function (data) {
+      // 서버에서 받아온 데이터
+      console.log(data.price)
+    }).fail(function () {
+      console.log('실패함')
+    });
+
+    // $.post('https://codingapple1.github.io/hello.txt').done(function (data) {
+    //   // 서버로 보낼 데이터
+    //   console.log(data)
+    // })
+  </script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 
 </body>
+
 </html>
