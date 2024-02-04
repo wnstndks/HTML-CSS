@@ -37,12 +37,14 @@
 
 
     <script>
+
         function 함수(products) {
             products.forEach((a) => {
                 var 탬플릿 = `<div class="col-sm-4">
                         <img src="https://via.placeholder.com/600" class="w-100">
                         <h5>${a.title}</h5>
                         <p>가격 : ${a.price}</p>
+                        <button class='buy'>구매</button>
                     </div>`
                 $('.row').append(탬플릿);
             });
@@ -187,6 +189,55 @@
 
 
         });
+        
+        // 데이터를 반영구적으로 저장 - 브라우저 안에 몰래 데이터 저장 가능
+        // 개발자도구의 application 탭 -> local storage, sessionstorage 이름:값 형태로 저장 문자/숫자만 저장가, IndexedDB 구조화된 데이터용량 저장, cookies 보통 로그인정보 저장, cache storage - html css js 저장하는 곳
+        // localStorage는 사이트 재접속해도 유지, sessionStorage는 사이트나가면 자동삭
+
+
+        //구매버튼 누르면 localStorage에 저장해보자
+        // localStorage.setItem('이름','kim');
+        // // 출력
+        // localStorage.getItem('이름');
+        // // 삭제
+        // localStorage.removeItem('이름');
+        
+        // //localStorage에 array, object 저장하려면? -> JSoN으로 바꾸면 저장가능
+        // var arr = [1,2,3];
+        // var newArr=JSON.stringify(arr);
+        // localStorage.setItem('num',newArr);
+        // var 꺼낸거 =localStorage.getItem('num');
+        // console.log(꺼낸거);
+
+        // // json -> array.object
+        // JSON.parse(꺼낸거);
+        // console.log(JSON.parse(꺼낸거)[0]);
+
+        // localStorage 데이터 수정?
+        // 1. 자료꺼냄 2.꺼낸거 수정함 3. 다시 넣음
+        
+    </script>
+
+    <script>
+        // 내 형제요소 찾는 법 알아봐야
+        // localStorage가 비어있을 때, 뭐가 있을때 저장방식이 뭔가 다를듯
+
+        // 상품별 구매버튼을 클릭하면 cart라는 키에 상품명이 array형태로 들어가야된다
+        // 모든 buy 버튼 요소를 가져옵니다.
+
+        
+        var arr=[];
+
+        $('.buy').click(function(){
+            var productName = $(this).parent().find('h5').text();
+            arr.push(productName);
+            var newCart=JSON.stringify(arr);
+            localStorage.setItem('cart',newCart);
+            var 꺼낸거 =localStorage.getItem('cart');
+            console.log(꺼낸거);
+
+        });
+
 
 
     </script>
