@@ -78,7 +78,7 @@ div {
 .slide-container {
   /* vw - 브라우저폭 */
   width: 300vw;
-  transition: all 1s;
+  /* transition: all 1s; */
   /* transform: translateX(-100vw); 이게 최종화면 */
 }
 
@@ -88,5 +88,5 @@ div {
 }
 
 .slide-box img {
-  width: 100px;
+  width: 1000px;
 }

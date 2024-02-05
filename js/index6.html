@@ -13,12 +13,6 @@
 <body>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
         integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-    <!-- 위의  jquery 설치한 곳 밑에서부터 jquery문법 사용 가능,  외부 라이브러리는 body 끝나기 전에 넣는 것 권장 -->
-
-
-    <!-- 1.미리 서브메뉴부터 디자인 
-         2. 버튼 누르면 보여달라고 JS - 
-         클래스를 탈부착식으로도 구현가능 => 애니메이션 추가 쉬움, 나중에 재사용 편리-->
 
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
@@ -53,30 +47,11 @@
         <li class="list-group-item">And a fifth one</li>
     </ul>
 
-    <p class="hello">안녕</p>
-    <!-- <button id="test-btn">버튼</button>
-
-    <script>
-        // document.querySelector('.hello').innerHTML='바보';
-        $('.hello').css('color','red')
-        // 클래스 추가 제거 토글은 addclass, removeclass, toggleclass
-        // jquery는 한줄이면 다 변경가능
-        // document.querySelector('#test-btn').addEventListener()
-        // addeventlistner는 on으로~
-        // $('셀렉터')로 찾으면 jQuery 함수만 붙일수 있음
-        // querySelector('셀렉터')로 찾으면 자바스크립트 함수만 붙일수 있음
-        $('#test-btn').on('click',function(){
-            $('.hello').slideUp();
-        })
-    </script> -->
-
     <div class="main-bg">
         <h4>Shirts on Sale</h4>
         <button id="login" class="btn btn-danger">로그인</button>
     </div>
 
-
-    <!--  모달창 안에 <form>만들기  form은 서버로 유저정보 전송하려고 쓰는 것임-->
 
     <div class="black-bg">
         <div class="white-bg">
@@ -95,12 +70,7 @@
     </div>
 
     <script>
-        // 전송버튼 누르면 저기 input에 입력한 값이 공백이면 알림창 띄워주세요~
-        // 조건문 쓰는 법 if( 조건) {조건이 참일 때 실행할 코드} else{위 조건이 참이 아닐때 실행할 코}
-
-        // input에 있는 값 가져오기
-        // document.querySelectorAll('.form-control')[0].value;
-
+    
         $('.btn.btn-primary').on('click', function () {
 
             if (document.querySelectorAll('.form-control')[0].value == '' || document.querySelectorAll('.form-control')[1].value == '') {
@@ -111,25 +81,13 @@
                 alert('더 길게 입력하쇼')
             }
 
-
         });
 
-
-        // 조건식을 연달아 쓰고 싶으면 else if
     </script>
-
-
-    <!-- 
-조건문에서 엄격한 비교는 ===, 느슨한 비교는 == 
-엄격한 비교는 타입까지 같아야 같다고 해주고 느슨한 비교는 타입은 달라도 상관없음
-if문 안에는 true/false, 1/0를 넣어주어야 잘 작동함
-조건 2개 이상 동시에 비교 -> &&, || 연산자
--->
 
 
     <script>
 
-        // 로그인 버튼 누르면 show-modal 클래스를 저기 붙여주셈
         $('#login').on('click', function () {
             $('.black-bg').addClass('show-modal');
         })
@@ -138,61 +96,15 @@ if문 안에는 true/false, 1/0를 넣어주어야 잘 작동함
             $('.black-bg').removeClass('show-modal');
         })
 
-        // document.querySelector('black-bg').classList.add('show-modal')
-
-
-    </script>
-
-    <!-- <script>
-
-        document.getElementsByClassName("navbar-toggler")[0].addEventListener('click', function () {
-            // 원하는 요소에 클래스명 추가하는 방법
-            document.getElementsByClassName('list-group')[0].classList.toggle('show'); // ->show가 있으면 제거, 없으면 추가하라는 
-        });
-        // 버튼을 한번 더 누르면 숨기기 ->toggle
-
-    </script> -->
-    <script>
-        // queryselector - css셀렉터를 넣어서 원하는 요소를 선택할수 잇게 도와줌
-        // css문법 그대로 쓸수 있는 셀렉터임 하지만 맨 위에 나오는 한개만 찾아줌
-        // 그래서 querySelectorAll을 인덱싱함으로서 하나씩 찾기
         document.querySelectorAll('.navbar-toggler')[0].addEventListener('click', function () {
             document.querySelector('.list-group').classList.toggle('show');
         })
 
-    </script>
-
-    <!-- js는 너무 길고 더럽기에 jquery react vue는 사용 -->
-    <!-- 
-        jquery 사용한 
-        <script>
-        $('.navbar-toggler')[0].on('click', function () {
-            $('.list-group').classList.toggle('show');
-        })
-    </script> -->
-
-
-    <!-- UI에 애니메이션 추가하려면 가능하면 css만으로 처리하는게 좋음
-    one-way UI 애니메이션 만드는 법 A상태-> B상태 
-
-    1.시작스타일 2.최종스타일을 class 로 만들어놓고 3. 원할때 최종스타일로 변하라고 코드짬 4.transition 추가 -->
-
-
-    <!-- input 찾기 -->
-    <!-- input태그에서 일어나는 input 이벤트 
-        -> 여기 유저가 입력한 값이 변할 때 실행됨 
-        change 이벤트는 input에 입력한 값이 바뀌고 포커스를 잃을 때 생성
-    -->
-
-    <script>
+    
         document.getElementById('email').addEventListener('input', function () {
             console.log('안녕')
         });
-    </script>
-
-
-
-    <script>
+    
         $('form').on('submit', function (e) {
 
             var 비번 = document.getElementById('pw').value;
@@ -206,7 +118,8 @@ if문 안에는 true/false, 1/0를 넣어주어야 잘 작동함
     <div style="overflow: hidden;">
         <div class="slide-container">
             <div class="slide-box">
-                <img src="/js/image/car1.png">
+                <img src="/js/image/car1.png" draggable="false">
+                <!-- 이러면 드래그 이동 안됨 -->
                 <p>1번사진</p>
             </div>
             <div class="slide-box">
@@ -226,8 +139,6 @@ if문 안에는 true/false, 1/0를 넣어주어야 잘 작동함
     <button class="next">다음</button>
     <button class="back">이전</button>
 
-    <!-- 1.시작화면 2.버튼2 누른후 최종화면 만들기 -->
-
     <script>
         $('.slide-1').on('click', function () {
             $('.slide-container').css('transform', 'translateX(0vw)');
@@ -238,15 +149,7 @@ if문 안에는 true/false, 1/0를 넣어주어야 잘 작동함
         $('.slide-3').on('click', function () {
             $('.slide-container').css('transform', 'translateX(-200vw)');
         });
-    </script>
-
-
-    <script>
-        // 다음버튼 누르면 
-        // 지금 1번사진 보고 있으면 2번사진 보여주세요,
-        // 지금 2번이라면 3번 사진 보여주세요
-
-        // 포스트잇 -> 변수
+    
         var 지금사진 = 1;
 
         $('.next').on('click', function () {
@@ -273,15 +176,91 @@ if문 안에는 true/false, 1/0를 넣어주어야 잘 작동함
             }
         })
 
-        // 사진이 여러개되어도 잘되는 확장성 좋은 다음버튼을 만들기
-        // $('.next').on('click',function(){
-        //     if($('.slide-container').css('transform','translateX(-'+지금사진+'00vw)')){
-        //         지금사진+=1;
-        //     }
-        // })
-
     </script>
 
+    <script>
+        // 기능1. 내가 드래그한 거리만큼 사진도 왼쪽으로 움직임
+        // 기능2. 손놓으면 100px이상 이동시 둘째 사진 보임 아니면 원래 사진 
+        // 알아야할 이벤트 mousedown-마우스로 누를때 mouseup-마우스 뗄때 mousemove-마우스움직일
+
+        var 시작좌표=0;
+        var 눌렀냐 =false;
+        
+        $('.slide-box').eq(0).on('mousedown',function(e){
+            // 현재 마우스위치 X좌표
+            // console.log(e.clientX)
+            
+            // 기능1. 내가 드래그한 거리만큼 사진도 왼쪽으로 움직임
+            시작좌표=e.clientX
+            눌렀냐=true;
+
+        });
+
+        $('.slide-box').eq(0).on('mousemove',function(e){
+            // 현재 마우스위치 X좌표
+            // console.log(e.clientX)
+            
+            // 기능1. 내가 드래그한 거리만큼 사진도 왼쪽으로 움직임
+            // console.log(e.clientX - 시작좌표);
+            if(눌렀냐 == true){
+            $('.slide-container').css('transform',
+            `translateX(${e.clientX -시작좌표}px)`)
+            }
+        });
+
+        $('.slide-box').eq(0).on('mouseup',function(e){
+            눌렀냐=false;
+            종료좌표=e.clientX;
+            console.log(시작좌표-종료좌표);
+            if(시작좌표-종료좌표 >=1000){
+                $('.slide-container').css('transition','all 0.5s').css('transform', 'translateX(-100vw)');
+            }else{
+                $('.slide-container').css('transition','all 0.5s').css('transform', 'translateX(0vw)');
+            }
+            
+            // transition 계속 넣어두면 이상해진다. ->마우스 반응을 못따라옴
+            setTimeout(()=>{
+                $('.slide-container').css('transition','none')
+            },500)
+        });
+
+        // 모바일에서 마우스 대신 터치를 사용, 따라서 mouse대신 touchstart-시작, touchmove-터치중, touchend-종료를 사용
+        $('.slide-box').eq(0).on('touchstart',function(e){
+            // 터치이벤트에서 X좌표 출력하려면
+            시작좌표=e.touches[0].clientX;
+            눌렀냐=true;
+
+        });
+
+        $('.slide-box').eq(0).on('touchmove',function(e){
+            
+            if(눌렀냐 == true){
+            $('.slide-container').css('transform',
+            `translateX(${e.clientX -시작좌표}px)`)
+            }
+        });
+
+        $('.slide-box').eq(0).on('touchend',function(e){
+            눌렀냐=false;
+            종료좌표=e.changedTouches[0].clientX;
+            console.log(시작좌표-종료좌표);
+            if(시작좌표-종료좌표 >=1000){
+                $('.slide-container').css('transition','all 0.5s').css('transform', 'translateX(-100vw)');
+            }else{
+                $('.slide-container').css('transition','all 0.5s').css('transform', 'translateX(0vw)');
+            }
+            
+            // transition 계속 넣어두면 이상해진다. ->마우스 반응을 못따라옴
+            setTimeout(()=>{
+                $('.slide-container').css('transition','none')
+            },500)
+        });
+
+        // hammer.js 사용시 브라우저간 호환성 잡아줌
+        // 이벤트리스너 6개 말고 1개만 필요
+        // 스와이프, pinch, rotate 이벤트리스너도 제
+
+    </script>
 
 
 
