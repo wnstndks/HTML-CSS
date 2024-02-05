@@ -23,13 +23,17 @@
     </div>
 
     <script>
+        // 로컬스토리지에서 cart 꺼내주세요
+        // array 남을듯
+        // array갯수만큼 p태그 추
         var cart = localStorage.getItem('cart');
         var showcart = JSON.parse(cart);
         console.log(showcart);
 
         showcart.forEach((a) => {
             var 탬플릿 = `<div class="col-sm-4">
-                        <h1>${a}</h1>
+                        <h1>${a.title} : ${a.quantity}</h1>
+                        <h1></h1>
                     </div>`
             $('.row').append(탬플릿);
         });
