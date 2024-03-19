@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +10,29 @@
 
 <body>
     <div class="alert-box">알림창</div>
-    <button onclick='열기()'>버튼</button>
-    <button onclick="닫기()">버튼</button>
-    
-    <!-- 스크립트는 밑에, html은 위에 -->
-    <script>
-        function 열기(){
-            document.getElementsByClassName('alert-box')[0].style.display="block";
-        }
-        function 닫기(){
-            document.getElementsByClassName('alert-box')[0].style.display="none";
-        }
-    </script>
+<button onclick='열고닫기("block")'>열기</button>
+<button onclick="열고닫기('none')">닫기</button>
+
+<div>
+    <span>내용을 입력하세요 :</span> <input type="text" id="myInput">
+    <button onclick="적기()">입력</button>
+</div>
+
+<div id="inputContent">
+    <span></span>
+</div>
+
+<script>
+    function 열고닫기(내용) {
+        document.querySelector('.alert-box').style.display = 내용;
+    }
+
+    function 적기() {
+        var inputVal = document.getElementById('myInput').value;
+        document.querySelector('#inputContent > span').innerText = inputVal;
+    }
+</script>
+
 </body>
 
 </html>
