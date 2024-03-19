@@ -8,14 +8,18 @@
 </head>
 
 <body>
-    <h1 id="hello">안녕하세요</h1>
-    <h1 id="hi">JS 초보에요</h1> 
-
+    <div class="alert-box">알림창</div>
+    <button onclick='열기()'>버튼</button>
+    <button onclick="닫기()">버튼</button>
+    
+    <!-- 스크립트는 밑에, html은 위에 -->
     <script>
-        document.getElementById('hello').innerHTML = '안녕';
-        document.getElementById('hi').innerHTML='JS 고수에요';
-        document.getElementById('hello').style.color='blue';
-        document.getElementById('hello').style.fontSize='16px';
+        function 열기(){
+            document.getElementsByClassName('alert-box')[0].style.display="block";
+        }
+        function 닫기(){
+            document.getElementsByClassName('alert-box')[0].style.display="none";
+        }
     </script>
 </body>
 
