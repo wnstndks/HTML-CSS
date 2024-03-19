@@ -10,28 +10,60 @@
 
 <body>
     <div class="alert-box">알림창</div>
-<button onclick='열고닫기("block")'>열기</button>
-<button onclick="열고닫기('none')">닫기</button>
+    <button onclick='열고닫기("block")'>열기</button>
+    <button onclick="열고닫기('none')">닫기</button>
 
-<div>
-    <span>내용을 입력하세요 :</span> <input type="text" id="myInput">
-    <button onclick="적기()">입력</button>
-</div>
+    <div>
+        <span>내용을 입력하세요 :</span> <input type="text" id="myInput">
+        <button onclick="적기()">입력</button>
+    </div>
 
-<div id="inputContent">
-    <span></span>
-</div>
+    <div id="inputContent">
+        <span></span>
+    </div>
 
-<script>
-    function 열고닫기(내용) {
-        document.querySelector('.alert-box').style.display = 내용;
-    }
+    <div class="login">
+        <button onClick="alertBox('아이디')">버튼1</button>
+        <button onClick="alertBox('비번')">버튼2</button>
+    </div>
 
-    function 적기() {
-        var inputVal = document.getElementById('myInput').value;
-        document.querySelector('#inputContent > span').innerText = inputVal;
-    }
-</script>
+    <div class="myImg">
+        <img src="/review/image/potato.png" />
+    </div>
+
+    <div class="alert-box2" id="alert">
+        <p id="title">알림창임</p>
+        <button id="close"> 닫기 </button>
+    </div>
+
+    <script>
+        function 열고닫기(내용) {
+            document.querySelector('.alert-box').style.display = 내용;
+        }
+
+        function 적기() {
+            var inputVal = document.getElementById('myInput').value;
+            document.querySelector('#inputContent > span').innerText = inputVal;
+        }
+
+        function alertBox(내용) {
+            document.querySelector('.alert-box').innerHTML = 내용 + "을(를) 입력하세요";
+        }
+
+        // getElementsById('클래스명')[순서] 
+        // [0] 이렇게 쓰면 찾은 것중 위에서부터 1번째 요소
+        // [1] 이렇게 쓰면 찾은 것중 위에서부터 2번째 요소
+        // [2] 이렇게 쓰면 찾은 것중 위에서부터 3번째 요소
+        document.getElementsByClassName('myImg')[0].style.backgroundColor = "grey";
+
+
+        document.getElementById('close').addEventListener('click',()=>{
+            document.getElementById('title').style.display="none";
+        })
+
+
+
+    </script>
 
 </body>
 

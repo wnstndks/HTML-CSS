@@ -3,7 +3,8 @@ body {
   }
   
 div {
-    box-sizing: border-box;
+  /* padding과 border를 변경해도 요소의 크기가 변하지 않음  */
+  box-sizing: border-box;
 }
 
 .alert-box {
@@ -13,3 +14,11 @@ div {
   border-radius: 5px;
   display: none;
 } 
+
+
+.myImg{
+  margin: 50px;
+  display: block;
+  margin-left:auto;
+  margin-right: auto;
+}
