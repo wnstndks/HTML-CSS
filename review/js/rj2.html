@@ -16,6 +16,15 @@
 </head>
 
 <body>
+
+
+    <div class="black-bg">
+        <div class="white-bg">
+            <h4>로그인하세요</h4>
+            <button class="btn btn-danger" id="close">닫기</button>
+        </div>
+    </div>
+
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <span class="navbar-brand">Navbar</span>
@@ -38,37 +47,42 @@
     </ul>
 
 
+    <button class="login-button">로그인</button>
 
-    <div>
-        <p class="hello">안녕</p>
-        <button class="test-btn">버튼</button>
-    </div>
+    
 
-    <div class="black-bg">
-        <div class="white-bg">
-            <h4>로그인하세요</h4>
-            <button class="btn btn-danger" id="close">닫기</button>
-        </div>
-    </div>
+    <script>
+
+        $('.login-button').on('click', () => {
+            $('.black-bg').addClass('show-modal');
+        })
+
+        $('#close').on('click',()=>{
+            $('.black-bg').removeClass('show-modal');
+
+        })
+    </script>
+
+    <script>
+        $('.navbar-toggler').on('click',()=>{
+            $('.list-group').toggleClass('show')
+        })
+
+    </script>
 
 
     <script>
         document.querySelectorAll('.navbar-toggler')[0].addEventListener('click', () => {
             // toggle : 클래스명이 있으면 제거하고, 클래스명이 없으면 붙여줌.
-            document.querySelectorAll('.list-group')[0].classList.toggle('show');
+            // document.querySelectorAll('.list-group')[0].classList.toggle('show');
         })
 
         // querySelector('') .은 클래스명
         // querySelector('') /은 아이디명
-
-
-
-        $('.test-btn').on('click', () => {
-            $('.hello')[0].innerHTML = "뭐야";
-            $('.hello').fadeOut();
-        })
+        // document.querySelector('.hello').innerHTML = 'hi';
 
     </script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
