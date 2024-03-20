@@ -24,12 +24,16 @@ div {
 }
 
 .list-group {
-  display : none;
+  display: block; /* 기본적으로 블록 레벨 요소로 표시 */
+  max-height: 0; /* 초기에는 높이를 0으로 설정하여 숨김 */
+  overflow: hidden; /* 넘치는 내용을 숨기기 위해 overflow 속성 사용 */
+  transition: max-height 1s ease; /* 높이 변화에 대한 전환 효과 추가 */
 }
 
 .show {
-  display : block;
+  max-height: 400px; /* .show 클래스가 적용되면 최대 높이를 400px로 설정하여 보이게 함 */
 }
+
 
 .login-button{
   background-color: brown;
