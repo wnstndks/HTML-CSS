@@ -14,11 +14,11 @@
 
 <body>
 
-    <div class="alert alert-danger">
+    <!-- <div class="alert alert-danger">
         <span id="sec">5</span>초이내 구매시 사은품 증정
-    </div>
+    </div> -->
 
-    <script>
+    <!-- <script>
         var count = 5;
 
         setInterval(() => {
@@ -30,8 +30,38 @@
                 $('.alert').hide();
             }
         }, 1000);
+    </script> -->
 
+    <div class="white-bg">
+        <h4>로그인하세요</h4>
+        <form action="success.html">
+            <div class="my-3">
+                <input type="text" class="form-control" id="email">
+            </div>
+            <div class="my-3">
+                <input type="password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">전송</button>
+            <button type="button" class="btn btn-danger" id="close">닫기</button>
+        </form>
+    </div>
 
+    <script>
+
+        $('form').on('submit', function (e) {
+
+            var insert = document.getElementById('email').value;
+            if (/\S+@\S+\.\S+/.test(insert)==false) {
+                alert('이메일형식아님');
+                e.preventDefault();
+            }
+            var pw = $('.form-control').eq(1).val();
+
+            if(/[A-Z]/.test(pw)==false){
+                alert('대문자좀')
+            }
+        });
+        
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
