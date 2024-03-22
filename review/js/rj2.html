@@ -23,41 +23,47 @@
             <h4>로그인하세요</h4>
             <form action="success.html">
                 <div class="my-3">
-                  <input type="text" class="form-control">
-                 </div>
-                 <div class="my-3">
-                   <input type="password" class="form-control">
-                 </div>
-                 <button type="submit" class="btn btn-primary">전송</button>
-                 <button type="button" class="btn btn-danger" id="close">닫기</button>
-              </form> 
+                    <input type="text" class="form-control">
+                </div>
+                <div class="my-3">
+                    <input type="password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">전송</button>
+                <button type="button" class="btn btn-danger" id="close">닫기</button>
+            </form>
         </div>
     </div>
 
-    
+
     <script>
         // 일반태그는 따로 앞에 작성x
-        $('form').on('submit',(e)=>{
+        $('form').on('submit', (e) => {
             // 기본 제출 동작 방지
-            e.preventDefault();
+            // e.preventDefault();
 
             // jquery에서는 값을 가져오려면 value가 아닌 val()
-            if($('.form-control').eq(0).val()==''){
+            if ($('.form-control').eq(0).val() == '') {
                 alert('아이디를 입력해주세요')
             }
-            if($('.form-control').eq(1).val()==''){
+            if ($('.form-control').eq(1).val() == '') {
                 alert('비번을 입력해주세요')
             }
-            if($('.form-control').eq(1).val().length<6){
+            if ($('.form-control').eq(1).val().length < 6) {
                 alert('여섯글자 이상!')
             }
         })
+
+
+
+
+
     </script>
 
 
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <span class="navbar-brand">Navbar</span>
+            <span class="navbar-brand">MYSHOP</span>
+            <span class="badge bg-dark ms-auto mx-3 ">다크모드 🔄</span>
             <button class="navbar-toggler" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -77,10 +83,11 @@
         <li class="list-group-item">And a fifth one</li>
     </ul>
 
+    <div class="login-container">
+        <h1>Shoes Shop</h1>
+        <button class="login-button">로그인</button>
+    </div>
 
-    <button class="login-button">로그인</button>
-
-    
 
     <script>
 
@@ -88,16 +95,32 @@
             $('.black-bg').addClass('show-modal');
         })
 
-        $('#close').on('click',()=>{
+        $('#close').on('click', () => {
             $('.black-bg').removeClass('show-modal');
 
         })
     </script>
 
     <script>
-        $('.navbar-toggler').on('click',()=>{
+        $('.navbar-toggler').on('click', () => {
             $('.list-group').toggleClass('show')
         })
+
+        var count=0;
+
+        $('.badge').on('click',()=>{
+            count+=1;
+            if(count%2==1){
+                // jquery로 html 내부 글자바꾸는 법은 html()
+                $('.badge').html('라이트모드 🔄')
+                $('body').removeClass('body-background')
+            }else{
+                $('.badge').html('다크모드 🔄')             
+                $('body').addClass('body-background')
+ 
+            }
+        });
+
 
     </script>
 

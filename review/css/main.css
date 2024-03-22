@@ -63,3 +63,20 @@ div {
   visibility : visible;
   opacity : 1;
 }
+
+.login-container{
+  margin:100px;
+  text-align: center;
+}
+.login-button{
+  margin:10px;
+  background-color: white;
+  border:none;
+  width: 100px;
+  height: 30px;
+}
+
+.body-background{
+  background-color: black;
+  color:white;
+}
