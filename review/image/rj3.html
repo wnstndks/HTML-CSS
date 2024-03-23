@@ -32,7 +32,7 @@
         }, 1000);
     </script> -->
 
-    <!-- <div class="white-bg">
+    <div class="white-bg">
         <h4>로그인하세요</h4>
         <form action="success.html">
             <div class="my-3">
@@ -44,68 +44,25 @@
             <button type="submit" class="btn btn-primary">전송</button>
             <button type="button" class="btn btn-danger" id="close">닫기</button>
         </form>
-    </div> -->
+    </div>
 
     <script>
 
         $('form').on('submit', function (e) {
 
             var insert = document.getElementById('email').value;
-            if (/\S+@\S+\.\S+/.test(insert) == false) {
+            if (/\S+@\S+\.\S+/.test(insert)==false) {
                 alert('이메일형식아님');
                 e.preventDefault();
             }
             var pw = $('.form-control').eq(1).val();
 
-            if (/[A-Z]/.test(pw) == false) {
+            if(/[A-Z]/.test(pw)==false){
                 alert('대문자좀')
             }
         });
+        
     </script>
-
-
-    <!-- one-way animation 만들기
-    1. 애니메이션 시작 전 화면 만들기
-    2. 애니메이션 종료후 화면 만들기
-    3. 언제 종료화면으로 변할지 JS 코드 짜기
-    4. transition 추가하기  -->
-
-    <div style="overflow: hidden">
-        <div class="slide-container">
-            <div class="slide-box">
-                <img src="/review/image/car1.png">
-            </div>
-            <div class="slide-box">
-                <img src="/review/image/car2.png">
-            </div>
-            <div class="slide-box">
-                <img src="/review/image/car3.png">
-            </div>
-        </div>
-    </div>
-
-    <button class="slide-1">1</button>
-    <button class="slide-2">2</button>
-    <button class="slide-3">3</button>
-
-
-    <script>
-        $('.slide-1').on('click', function () {
-            $('.slide-container').css('transform', 'translateX(0vw)');
-        });
-        $('.slide-2').on('click', function () {
-            $('.slide-container').css('transform', 'translateX(-100vw)');
-        });
-        $('.slide-3').on('click', function () {
-            $('.slide-container').css('transform', 'translateX(-200vw)');
-        });
-    </script>
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
