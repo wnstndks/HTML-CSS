@@ -115,15 +115,12 @@
 
         console.log(len);
 
-        for (let i = 0; i < len; i++) {
+        // for (let i = 0; i < len; i++) {
 
-            $('.tab-button').eq(i).on('click', () => {
-                $('.tab-button').removeClass('orange')
-                $('.tab-button').eq(i).addClass('orange')
-                $('.tab-content').removeClass('show')
-                $('.tab-content').eq(i).addClass('show')
-            })
-        }
+        //     $('.tab-button').eq(i).on('click', () => {
+        //         탭열기(i)
+        //     })
+        // }
 
         // for 문안에 var을 쓰면 안되는 이유
         // - 컴퓨터는 위에서부터 한줄한줄 코드해석
@@ -141,6 +138,32 @@
         // let const는 재선언 불가능
         // let은 재할당 가능
         // cosnt는 재할당도 불가능
+    </script>
+
+
+
+    <script>
+        $('.list').click((e) => {
+            if ($(e.target).is($('.tab-button').eq(0))) {
+                탭열기(0)
+            }
+            if ($(e.target).is($('.tab-button').eq(1))) {
+                탭열기(1)
+            }
+
+            if ($(e.target).is($('.tab-button').eq(2))) {
+                탭열기(2)
+            }
+        })
+    </script>
+
+    <script>
+        function 탭열기(파라미터) {
+            $('.tab-button').removeClass('orange')
+            $('.tab-button').eq(파라미터).addClass('orange')
+            $('.tab-content').removeClass('show')
+            $('.tab-content').eq(파라미터).addClass('show')
+        }
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
