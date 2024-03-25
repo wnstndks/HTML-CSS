@@ -46,12 +46,12 @@
     </nav>
 
 
-    <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll">
+    <!-- <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit
         debitis at, laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, eligendi quae consectetur
         praesentium exercitationem.
-    </div>
-    <div style="height:1000px"></div>
+    </div> -->
+    <div style="height:100px"></div>
 
     <script>
         // window.addEventListener('scroll',()=>{
@@ -82,6 +82,66 @@
         });
     </script>
 
+
+    <div class="container mt-5">
+        <ul class="list">
+            <li class="tab-button">Products</li>
+            <li class="tab-button orange">Information</li>
+            <li class="tab-button">Shipping</li>
+        </ul>
+        <div class="tab-content">
+            <p>상품설명입니다. Product</p>
+        </div>
+        <div class="tab-content show">
+            <p>스펙설명입니다. Information</p>
+        </div>
+        <div class="tab-content">
+            <p>배송정보입니다. Shipping</p>
+        </div>
+    </div>
+
+    <script>
+        // $('.tab-button').eq(0).on('click', () => {
+        //     $('.tab-button').removeClass('orange')
+        //     $('.tab-button').eq(0).addClass('orange')
+        //     $('.tab-content').removeClass('show')
+        //     $('.tab-content').eq(0).addClass('show')
+        // })
+
+        // 반복적인 셀렉터는 변수에 넣어 쓰기
+        // for(횟수){복붙할 코드}
+
+        const len = $('.tab-content').length;
+
+        console.log(len);
+        
+        for (let i= 0; i < len; i++) {
+
+            $('.tab-button').eq(i).on('click', () => {
+                $('.tab-button').removeClass('orange')
+                $('.tab-button').eq(i).addClass('orange')
+                $('.tab-content').removeClass('show')
+                $('.tab-content').eq(i).addClass('show')
+            })
+        }
+
+        // for 문안에 var을 쓰면 안되는 이유
+        // - 컴퓨터는 위에서부터 한줄한줄 코드해석
+        // - 이벤트리스너는 사용자가 버튼 클릭시 실행
+        // - 그래서 이벤트 리스너 내 4줄 코드는 아직 실행치 않고 지나감
+        // - 컴퓨터는 변수를 채우려는 습성이 있기에 i라는 변수는 채워져있음 var i=3이 되어 벌써 남아 있음
+        // let은 변수 포스트잇이 for밖이 아닌 안에서만
+        // for 안에서 var i =0 을 쓸시 var변수의 범위는 function
+        //var i들어있는 포스트잇은 for바깥에
+        // for 안에서 let i=0 쓰면 let변수의 범위는 {}
+        // let i 들어있는 포스트잇은 for안쪽에 3개 생성됨
+        // 컴퓨터는 변수 가져다쓸때 가장 가까운것 씀
+
+        // var는 재선언 가능, 재할당 가능
+        // let const는 재선언 불가능
+        // let은 재할당 가능
+        // cosnt는 재할당도 불가능
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
