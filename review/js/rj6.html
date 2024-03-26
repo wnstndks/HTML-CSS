@@ -66,6 +66,7 @@
         <select class="form-select mt-2">
             <option>모자</option>
             <option>셔츠</option>
+            <option>바지</option>
         </select>
         <select class="form-select mt-2 form-hide">
             <option>95</option>
@@ -73,16 +74,38 @@
         </select>
     </form>
 
-    <script>
-        $('.form-select').eq(0).on('input', function () {
+    <div id="test">
 
+    </div>
+    <script>
+        // script안에 적은 코드는 페이지 로드시 1회 실행됨
+        // 따라서 select 조작할 때마다 실행해야 의도대로 잘 동작
+        $('.form-select').eq(0).on('input', function () {
             var value = $('.form-select').eq(0).val();
             if (value == '셔츠') {
                 $('.form-select').eq(1).removeClass('form-hide');
+                $('.form-select').eq(1).html('')
+                // 문자 자료로 html을 만들기
+                var 탬플릿 =`<option>95</option><option>100</option>`
+                // jquery로 추가하기, 추가하기 싫으면 append가 아닌 html() 사용해도 됨
+                $('.form-select').eq(1).append(탬플릿)
             }
-
+            // 서버에서 보낸 데이터 갯수에 맞게 <option> 태그를 생성해줘야 좋음
+            else if(value=='바지'){
+                // 두번째 select 보이게
+                $('.form-select').eq(1).removeClass('form-hide');
+                // 두번째 select 비우기
+                $('.form-select').eq(1).html('');
+                // 들어갈 html
+                var 탬플릿 = `<option>s</option><option>m</option><option>l</option>`
+                // 둘째 select 안에 append하기
+                $('.form-select').eq(1).append(탬플릿)
+            }else{
+                $('.form-select').eq(1).addClass('form-hide');
+            }
         });
 
+        
     </script>
 
 
