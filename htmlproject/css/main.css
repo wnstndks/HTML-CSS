@@ -1,0 +1,17 @@
+.body-color{
+    background-color: orange;
+    height:300px;
+    width:100%;
+}
+div{
+    box-sizing: border-box;
+}
+/* .recentvideo{
+    width: 500px; 
+    height:500px;
+} */
+
+.winkavideo{
+    width: 500px; 
+    height:500px;
+}
