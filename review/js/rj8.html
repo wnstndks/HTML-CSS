@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/review/css/main2.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div class="card-group container">
+        <div class="card">
+            <img src="https://via.placeholder.com/600">
+            <div class="card-body">
+                <h5>Card title</h5>
+                <p>가격 : 70000</p>
+                <button class="btn btn-danger">주문하기</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/600">
+            <div class="card-body">
+                <h5>Card title</h5>
+                <p>가격 : 70000</p>
+                <button class="btn btn-danger">주문하기</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://via.placeholder.com/600">
+            <div class="card-body">
+                <h5>Card title</h5>
+                <p>가격 : 70000</p>
+                <button class="btn btn-danger">주문하기</button>
+            </div>
+        </div>
+    </div>
+    <div style="height:100px"></div>
+    <script>
+        var products = [
+            { id: 0, price: 70000, title: 'Blossom Dress' },
+            { id: 1, price: 50000, title: 'Springfield Shirt' },
+            { id: 2, price: 60000, title: 'Black Monastery' }
+        ];
+        for (let i = 0; i < product; i++) {
+            $('.card-body h5').eq(i).html(products[i].title)
+            $('.card-body p').eq(i).html('가격: ' + products[i].price)
+        }
+    </script>
+
+    <!-- 서버란? -->
+    <!--     
+        유저가 데이터를 달라고 요청을 하면, 데이터를 보내주는 간단한 프로그램
+        서버에 데이터를 요청할 때는
+        1. 어떤 데이터인지, url로 잘 기재해야됨
+        2. 어떤 방법으로 요청할지 결정해야함 (GET/POST  등)
+    -->
+
+    <!-- 
+        GET 요청이란 서버에 있던 데이터를 읽고 싶을 때 주로 사용
+        POST 요청은 서버로 데이터를 보내고 싶을 때 사용
+        서버는 유저데이터를  DB에 저장해주는 역할도 함 
+    -->
+
+    <!-- Ajax -->
+    <!-- 서버에 GET, POST 요청을 할 때 새로고침 없이 데이터를 주고 받을 수 있게 도와주는 간단한 브라우저 기능 -->
+    <!-- 새로고침 없이도 쇼핑몰 상품을 더 가져올 수 있음, 새로고침 없이도 댓글을 서버로 전송 가능 -->
+
+    <script>
+        // $.get('https://codingapple1.github.io/hello.txt').done((data)=>{
+        //     console.log(data);
+        // }).fail((error)=>{
+        //     console.log('실패함');
+
+        //     // done/fail 또는 then/catch
+        // });
+
+        // $.post('url~~', {name : 'kim'})
+
+        // $.get('https://codingapple1.github.io/price.json').done((data)=>{
+        //     console.log(data.price)
+        // })
+
+
+        // 서버와 데이터를 주고받을 때는 문자만 주고 받기 가능
+        // array, object 같은 거 전송 불가능
+        // object를 JSON으로 바꾸어 전송해주어야 함 -> fetch로 가져온 결과를 array/object로 바꾸고 싶으면 res.json()을 추가해주면 됨
+    </script>
+
+    <div class="container">
+        <div class="row">
+            
+        </div>
+    </div>
+
+    <script>
+        // 카드레이아웃 생성?
+        products.forEach((a, i) => {
+            var 템플릿 =
+                `<div class="col-sm-4">
+                    <img src="https://via.placeholder.com/600" class="w-100">
+                    <h5>${products[i].title}</h5>
+                    <p>가격 : ${products[i].price}</p>
+                </div>`;
+            $('.row').append(템플릿)
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
