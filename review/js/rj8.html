@@ -39,6 +39,7 @@
             </div>
         </div>
     </div>
+    <button id="jungryeol">정렬</button>
     <div style="height:100px"></div>
     <script>
         var products = [
@@ -50,6 +51,15 @@
             $('.card-body h5').eq(i).html(products[i].title)
             $('.card-body p').eq(i).html('가격: ' + products[i].price)
         }
+
+        $('#jungryeol').on('click', () => {
+            products.sort(function (a, b) {
+                return a.price - b.price
+            });
+
+            console.log(products);
+        })
+
     </script>
 
     <!-- 서버란? -->
@@ -140,7 +150,7 @@
             } else if (count == 1) {
                 $.get('https://codingapple1.github.io/js/more2.json').done((data) => {
                     appendProducts(data);
-                    $('#plusproduct').css('display','none');
+                    $('#plusproduct').css('display', 'none');
                 });
             }
         });
