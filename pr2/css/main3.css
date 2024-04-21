@@ -1,0 +1,68 @@
+body{
+    margin:0
+}
+div{
+    box-sizing: border-box;
+}
+
+.first_image{
+    padding:1px;
+    background-image: linear-gradient(to top,blue,aqua);
+    width: 100%;
+    height: 500px;
+    display:flex;
+}
+
+.ffont{
+    margin:100px;
+    color:white;
+    vertical-align: center;
+}
+.iimage{
+    width: 20%;
+    height:80%;
+    float:right;
+    justify-content: right;
+    margin-left:300px;
+    vertical-align: bottom;
+}
+.sec-p{
+    text-align: center;
+    font-size: 20px;
+    margin:100px;
+}
+.second-image{
+    padding:1px;
+    background-color: blue;
+    width: 100%;
+    height: 400px;
+    color:white;
+    text-align: center;
+    margin-left: auto;
+    margin-right:auto;
+}
+.backg{
+    background-color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    color:blue;
+}
+.fas{
+    text-align: center;
+}
+.sfont{
+    margin: 50px;
+}
+.icon-setting{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center; 
+}
+.myicon{
+     text-align: center;
+    padding:10px;
+
+}
