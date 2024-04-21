@@ -53,16 +53,66 @@ div{
 }
 .sfont{
     margin: 50px;
+    text-align: center;
 }
 .icon-setting{
     height: 50%;
     width: 100%;
     display: flex;
     text-align: center;
-    align-items: center; 
+    justify-content: center; 
+    align-items: center;
 }
 .myicon{
-     text-align: center;
+    text-align: center;
     padding:10px;
+    justify-content: center;
+    vertical-align: center;
+}
+i{
+    font-size: 30px;
+}
+.grid-image{
 
+    width: 70%;
+    height: 500px;
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-areas:
+        "profil1 profil2"
+        "profil3 profil4";
+}
+
+.profil1, .profil2, .profil3, .profil4 {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover; /* 이미지를 전체적으로 채우기 */
+    color:white;
+    padding:100px;
+    
+}
+
+.profil1 {
+    background-image: url('/pr2/image/portfolio-1.jpg');
+    grid-area: profil1;
+}
+
+.profil2 {
+    background-image: url('/pr2/image/portfolio-2.jpg');
+    grid-area: profil2;
+}
+
+.profil3 {
+    background-image: url('/pr2/image/portfolio-3.jpg');
+    grid-area: profil3;
+}
+
+.profil4 {
+    background-image: url('/pr2/image/portfolio-4.jpg');
+    grid-area: profil4;
+}
+.backg2{
+    padding:10px;
 }
