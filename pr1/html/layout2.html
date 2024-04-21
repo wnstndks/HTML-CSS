@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/main2.css" rel="stylesheet">
+    <!-- 반응형 사이트 만들려면 밑의 코드 필요함 -->
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+    <!-- font awesome -->
+    <!-- cdn  방시글 이용한 라이브러리 설치, 복사 붙여넣기를 통해 라이브러리 설치,  -->
+    <!-- 아이콘 쓰기 위해 필 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- div박스를 가로로 쉽게 배치할수 있는 속성->display: flex
+    <div class="flex-container">
+        <div class="flex-item" style="flex-grow: 1;">1</div>
+        박스크기를 비율로 설정가능
+        <div class="flex-item" style="flex-grow: 2;">2</div>
+        <div class="flex-item">3</div>
+    </div> -->
+    <!-- nav 태그는 의미있는 div태그 -->
+    <div class="flex-logo">
+        <div class="flex-text" style="font-size: 40px; font-weight:900; text-align: left;">Musinsa</div>
+        <!-- 박스사이 띄우기 -->
+        <div style="flex-grow: 1;"></div>
+        <div class="flex-text" style="margin-right: 5px;">products</div>
+        <div class="flex-text">services</div>
+    </div>
+
+    <!-- 화면사이즈가 작으면 스타일을 변경 =>반응형 웹페이지-->
+
+    <div class="main-background">
+        <h3 class="main-title">Buy Our Clothes! Now on Sales</h4>
+            <p class="main-content">
+                국내 최고의 스파 브랜드 무신사
+                무신사는 21세기 런칭된 국내 옷의 방향성을 바꾼 기업이다.
+            </p>
+            <button class="main-button"><a href="https://musinsa.com">링크로 이동</a></button>
+    </div>
+    <div class="main-block">
+        <h4 style="text-align: center;">How we design our clothes</h5>
+            <p style="text-align:center; font-weight: 500;">
+                Our clothing brand offers a distinct advantage by providing customers with high-quality garments at
+                affordable prices.
+                Leveraging our extensive network of factories and clothing experts allows us to maintain superior
+                quality standards while keeping production costs competitive.
+                This enables us to offer our clientele a unique combination of affordability and exceptional
+                craftsmanship, ensuring they receive value-driven, well-crafted clothing items tailored to their
+                preferences.
+            </p>
+    </div>
+
+    <!-- <br>
+     box에다 폭을 설정할때 width는 content 영역의 너비를 의미한다. padding이 크다 그러면 box 사이즈도 늘어나보이는것
+        그래서 content부분만 width로 설정하지 말고 padding과 border도 포함해야한다->box-sizing-
+    <div class="main-block" style="padding:50px;"> 
+        <h4 style="text-align: center;">How we design our clothes</h5>
+        <p style="text-align:center; font-weight: 500;">
+            Our clothing brand offers a distinct advantage by providing customers with high-quality garments at affordable prices. 
+            Leveraging our extensive network of factories and clothing experts allows us to maintain superior quality standards while keeping production costs competitive. 
+            This enables us to offer our clientele a unique combination of affordability and exceptional craftsmanship, ensuring they receive value-driven, well-crafted clothing items tailored to their preferences.
+        </p>
+    </div> -->
+
+    <!--  사이트를 만들다보면 사용자들이 뭔가를 입력해야하는 form같은게 있음 -->
+    <!-- form, input ->폼을 만들고 싶을때 마다 사용 <form action> ->작성한 내용이 어떤 서버경로로 전달될지
+        <form method> - 작성한 내용이 어떤 방식으로 서버에 전달될지 
+        input type= "text" ->일반 텍스트 입력
+                    "password"->패스워드 입력할때
+                    "email"->이메일입력
+                    "date" ->날짜입력
+                    "checkbox"->체크박스소환
+                    "radio"->라디오버튼
+        input value="미리채워진 값" 
+        placeholder="배경글자"
+        input name="인풋이름" -> 서버에 전달할 때 unique하게 이름을 지정하는데 이거를 통해 서버로 전달할때 이 이름으로 전달됨
+    -->
+    <!-- <form>
+        <input type="text" class="text-input">
+        <input>
+        <input>
+    </form>
+    <select>
+        <option></option>
+        <option></option>
+        <option></option>
+    </select>
+    textarea 큰 input같은거 만들고 싶을 때 사용 그리고 웹 내에서 드래그해서 내가 원하는 사이즈로 만들수있음 -->
+    <!-- textarea rows="10" -10줄을 설정할때 
+    <textarea></textarea> -->
+    <!-- <input type="submit">
+            or
+        <button type="submit">전송</button>
+            =>전송버튼 만들수 있음 -->
+
+    <div class="table-container">
+        <div class="table-container2">
+            <div class="box-container">
+                <!-- 아이콘 스타일링은 글자 처럼 가능 -->
+                <i class="fas fa-shopping-cart fa-3x"></i>
+                <h3>Fast Shipping</h3>
+                <p>Iorem ipsum</p>
+            </div>
+            <div class="box-container">
+                <i class="fas fa-users fa-3x"></i>
+                <h3>Good Service</h3>
+                <p>Iorem ipsum</p>
+            </div>
+        </div>
+        <div class="table-container2">
+            <div class="box-container">
+                <i class="fas fa-percent fa-3x"></i>
+                <h3>Free Coupons</h3>
+                <p>Iorem ipsum</p>
+            </div>
+            <div class="box-container">
+                <i class="fas fa-tshirt fa-3x"></i>
+                <h3>New Products</h3>
+                <p>Iorem ipsum</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- one way 애니메이션 만드는 step
+1. 시작 스타일 만들기
+2. 최종 스타일 만들기
+3. 언제 최종스타일로 변하는지
+4. transition으로 애니메이션 -->
+
+    <div class="shop-bg">
+        <div class="shop-container">
+            <div class="shop-item">
+                <!-- 최종스타일을 먼저 만드는 게 편함 -->
+                <div style="position: relative">
+                    <div class="overlay"></div>
+                    <img src="/html/images (1).jpg">
+                </div>
+            </div>
+            <div class="shop-item">
+                <div style="position: relative">
+                    <div class="overlay-wrap">
+                        <div class="overlay-black">
+                            <h1>$60%</h1>
+                            <p>인기상품</p>
+                        </div>
+                    </div>
+                    <img src="/html/images (2).jpg">
+                </div>
+            </div>
+            <div class="shop-item">
+                <!-- html 구조도 생각해야함
+                이미지 위에 div 박스 올려서 구현을 한것
+            이 레이아웃은 적합 x 마우스를 올리면 이미지에 마우스를 올리면 위에 있는 .overlay 박스는 안됨
+            내 위에 있는 태그 선택 불가능 내 자식 html을 선택하기 위한 것
+        여기에 쓸수 있는 셀렉터가 없기에 불가능 형제 셀렉터만 가능,
+    +셀렉터는 내 아래 있는 태그 선택할때는 가능, 형제란 나란히 있는 html을 형제 관계라고 함
+    만약에 마우스 영역을 overlay에 hover중 밑으로 내려가든가 정지하던가 할것
+    원하던 레이아웃 못만듬
+    -->
+                <div style="position: relative">
+                    <!-- 오버레이를 감싸는 박스 태그 하나 만드는 것 -->
+                    <!-- 이 박스는 이미지 위에 존재하는 그러니까 붕 뜨는 
+                            그런 투명한 박스, 이 투명한 박스에 마우스를 올리면 안에 있는 까만 박스가 밑에서부터 위로 올라오게 만들기
+                    -->
+                    <div class=overlay-wrap2>
+                        <div class="overlay-black2"></div>
+                    </div>
+                    <img src="/html/a0f8fba97eb3bfdd9ed268d3d0083cfaed8c2fc668c18d5c6288e5f3bfb7.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- transform 속성 -->
+    <h4 class="ani-text">안녕하세요</h4>
+
+</body>
+
+</html>

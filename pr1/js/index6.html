@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="/js/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand">Navbar</span>
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+
+    <script>
+        // html페이지가 스크롤될때마다 함수 실행
+        window.addEventListener('scroll', function () {
+            console.log(window.scrollY); //얼마나 스크롤바 내렸는지 확인시켜주는 것
+            // scrollTo(x,y) ->원하는 위치로 강제로 스크롤하기, Bootstrap 설치시 스무스하게 가능
+            // scrollBy(x,y) 현재 위치로 부터 강제로 스크롤하기
+        });
+
+        $(window).on('scroll', function () {
+            $(window).scrollTop()
+            // 현재 스크롤바 이동
+        })
+
+    </script>
+
+    <ul class="list-group">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+    </ul>
+
+    <div class="main-bg">
+        <h4>Shirts on Sale</h4>
+        <button id="login" class="btn btn-danger">로그인</button>
+    </div>
+
+
+    <div class="black-bg">
+        <div class="white-bg">
+            <h4>로그인하세요</h4>
+            <form action="success.html">
+                <div class="my-3">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="my-3">
+                    <input type="password" class="form-control" id="pw">
+                </div>
+                <button type="submit" class="btn btn-primary">전송</button>
+                <button type="button" class="btn btn-danger" id="close">닫기</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+    
+        $('.btn.btn-primary').on('click', function () {
+
+            if (document.querySelectorAll('.form-control')[0].value == '' || document.querySelectorAll('.form-control')[1].value == '') {
+                alert('입력 필드를 모두 채워주세요.');
+            }
+
+            if (document.querySelectorAll('.form-control')[1].value.length < 6) {
+                alert('더 길게 입력하쇼')
+            }
+
+        });
+
+    </script>
+
+
+    <script>
+
+        $('#login').on('click', function () {
+            $('.black-bg').addClass('show-modal');
+        })
+
+        $('#close').on('click', function () {
+            $('.black-bg').removeClass('show-modal');
+        })
+
+        document.querySelectorAll('.navbar-toggler')[0].addEventListener('click', function () {
+            document.querySelector('.list-group').classList.toggle('show');
+        })
+
+    
+        document.getElementById('email').addEventListener('input', function () {
+            console.log('안녕')
+        });
+    
+        $('form').on('submit', function (e) {
+
+            var 비번 = document.getElementById('pw').value;
+            if (/[A-Z]/.test(비번) == false) {
+                alert('대문자없는데요')
+            }
+
+        });
+    </script>
+
+    <div style="overflow: hidden;">
+        <div class="slide-container">
+            <div class="slide-box">
+                <img src="/js/image/car1.png" draggable="false">
+                <!-- 이러면 드래그 이동 안됨 -->
+                <p>1번사진</p>
+            </div>
+            <div class="slide-box">
+                <img src="/js/image/car2.png">
+                <p>2번사진</p>
+            </div>
+            <div class="slide-box">
+                <img src="/js/image/car3.png">
+                <p>3번사진</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
+    <button class="next">다음</button>
+    <button class="back">이전</button>
+
+    <script>
+        $('.slide-1').on('click', function () {
+            $('.slide-container').css('transform', 'translateX(0vw)');
+        });
+        $('.slide-2').on('click', function () {
+            $('.slide-container').css('transform', 'translateX(-100vw)');
+        });
+        $('.slide-3').on('click', function () {
+            $('.slide-container').css('transform', 'translateX(-200vw)');
+        });
+    
+        var 지금사진 = 1;
+
+        $('.next').on('click', function () {
+            if (지금사진 == 1) {//지금 보이는 사진이 1이면 - 몇번보고 있는지 보기위해서 포스트잇 붙여놓고 기록해놓으면 되지 않을까?
+                // 2번사진 보여주세요
+                $('.slide-container').css('transform', 'translateX(-100vw)');
+                지금사진++;
+            }
+            else if (지금사진 == 2) {
+                $('.slide-container').css('transform', 'translateX(-200vw)');
+                지금사진++;
+            }
+        })
+
+        $('.back').on('click', function () {
+            if (지금사진 == 2) {//지금 보이는 사진이 2이면 - 몇번보고 있는지 보기위해서 포스트잇 붙여놓고 기록해놓으면 되지 않을까?
+                // 1번사진 보여주세요
+                $('.slide-container').css('transform', 'translateX(0vw)');
+                지금사진--;
+            }
+            else if (지금사진 == 3) {
+                $('.slide-container').css('transform', 'translateX(-100vw)');
+                지금사진--;
+            }
+        })
+
+    </script>
+
+    <script>
+        // 기능1. 내가 드래그한 거리만큼 사진도 왼쪽으로 움직임
+        // 기능2. 손놓으면 100px이상 이동시 둘째 사진 보임 아니면 원래 사진 
+        // 알아야할 이벤트 mousedown-마우스로 누를때 mouseup-마우스 뗄때 mousemove-마우스움직일
+
+        var 시작좌표=0;
+        var 눌렀냐 =false;
+        
+        $('.slide-box').eq(0).on('mousedown',function(e){
+            // 현재 마우스위치 X좌표
+            // console.log(e.clientX)
+            
+            // 기능1. 내가 드래그한 거리만큼 사진도 왼쪽으로 움직임
+            시작좌표=e.clientX
+            눌렀냐=true;
+
+        });
+
+        $('.slide-box').eq(0).on('mousemove',function(e){
+            // 현재 마우스위치 X좌표
+            // console.log(e.clientX)
+            
+            // 기능1. 내가 드래그한 거리만큼 사진도 왼쪽으로 움직임
+            // console.log(e.clientX - 시작좌표);
+            if(눌렀냐 == true){
+            $('.slide-container').css('transform',
+            `translateX(${e.clientX -시작좌표}px)`)
+            }
+        });
+
+        $('.slide-box').eq(0).on('mouseup',function(e){
+            눌렀냐=false;
+            종료좌표=e.clientX;
+            console.log(시작좌표-종료좌표);
+            if(시작좌표-종료좌표 >=1000){
+                $('.slide-container').css('transition','all 0.5s').css('transform', 'translateX(-100vw)');
+            }else{
+                $('.slide-container').css('transition','all 0.5s').css('transform', 'translateX(0vw)');
+            }
+            
+            // transition 계속 넣어두면 이상해진다. ->마우스 반응을 못따라옴
+            setTimeout(()=>{
+                $('.slide-container').css('transition','none')
+            },500)
+        });
+
+        // 모바일에서 마우스 대신 터치를 사용, 따라서 mouse대신 touchstart-시작, touchmove-터치중, touchend-종료를 사용
+        $('.slide-box').eq(0).on('touchstart',function(e){
+            // 터치이벤트에서 X좌표 출력하려면
+            시작좌표=e.touches[0].clientX;
+            눌렀냐=true;
+
+        });
+
+        $('.slide-box').eq(0).on('touchmove',function(e){
+            
+            if(눌렀냐 == true){
+            $('.slide-container').css('transform',
+            `translateX(${e.clientX -시작좌표}px)`)
+            }
+        });
+
+        $('.slide-box').eq(0).on('touchend',function(e){
+            눌렀냐=false;
+            종료좌표=e.changedTouches[0].clientX;
+            console.log(시작좌표-종료좌표);
+            if(시작좌표-종료좌표 >=1000){
+                $('.slide-container').css('transition','all 0.5s').css('transform', 'translateX(-100vw)');
+            }else{
+                $('.slide-container').css('transition','all 0.5s').css('transform', 'translateX(0vw)');
+            }
+            
+            // transition 계속 넣어두면 이상해진다. ->마우스 반응을 못따라옴
+            setTimeout(()=>{
+                $('.slide-container').css('transition','none')
+            },500)
+        });
+
+        // hammer.js 사용시 브라우저간 호환성 잡아줌
+        // 이벤트리스너 6개 말고 1개만 필요
+        // 스와이프, pinch, rotate 이벤트리스너도 제
+
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="/js/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand">JSShop</span>
+            <span class="ms-auto mx-3 badge bg-dark">Dark</span>
+            <button class="navbar-toggler" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+
+    <script>
+        // scroll 이벤트 리스너
+        window.addEventListener('scroll', function () {
+            console.log(window.scrollY);
+        });
+        //  원하는 위치로 강제로 스크롤하기 window.scrollTo(x,y)
+        /* :root {
+            스크롤바 부트스트랩 부드럽게 취소하기 
+            scroll-behavior: auto;
+        } */
+
+        $(window).on('scroll', function () {
+            // 스크롤바 100px 이상 내리면 로고 폰트사이즈 줄이기
+            if ($(window).scrollTop() >= 100) {
+                $('.navbar-brand').css('font-size', '10px');
+            } else {
+                $('.navbar-brand').css('font-size', '25px');
+            }
+
+        })
+
+
+        /*
+            scroll 다룰 때 주의점
+            1.scroll 이벤트리스너 안의 코드는 1초에 60번 이상 실행
+            2.바닥체크도 여러번 중복으로 해줄듯
+        */
+
+        // 현재페이지 끝까지 스크롤 체크는? -> html 태그의 실제 높이, 스크롤 양을 체크해주면 된다.
+        // document.querySelector('html').scrollHeight ... 위와 비슷하게 
+
+    </script>
+
+    <ul class="list-group">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+    </ul>
+
+    <div class="main-bg">
+        <h4>Shirts on Sale</h4>
+        <button id="login" class="btn btn-danger">로그인</button>
+    </div>
+
+    <!-- 회원약관 -->
+    <div class="lorem" style="width: 200px; height: 100px; overflow-y: scroll">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae voluptas voluptatum minus praesentium fugit
+        debitis at, laborum ipsa itaque placeat sit, excepturi eius. Nostrum perspiciatis, eligendi quae consectetur
+        praesentium exercitationem.
+    </div>
+
+    <script>
+        // div의 스크롤바 내린 양 == div 박스의 실제높이
+        // ->div박스를 끝까지 스크롤한것 그러면 alert 띄우기
+        // div 스크롤바 내린 높이는 셀렉터.scrollTop - but 이거는 위에서부터 얼만큼내렷는지 설명, 그래서 div의 스크롤바 내린양 +지금 화면에 보이는박스 높이을 해주어야 div의 실제높이가 됨
+        // div 실제높이는 셀렉터.scrollHeight
+        $('.lorem').on('scroll', function(){
+            var 스크롤양=document.querySelector('.lorem').scrollTop;
+            var 실제높이=document.querySelector('.lorem').scrollHeight;
+            
+            // 눈에 보이는 div 박스의 높이
+            var 높이 =document.querySelector('.lorem').clientHeight;
+
+            console.log(스크롤양, 실제높이);
+
+            if(스크롤양+높이>=실제높이){
+                alert('다 봤다 이놈아');
+            }
+        })
+    </script>
+
+    <div class="black-bg">
+        <div class="white-bg">
+            <h4>로그인하세요</h4>
+            <form action="success.html">
+                <div class="my-3">
+                    <input type="text" class="form-control">
+                </div>
+                <div class="my-3">
+                    <input type="password" class="form-control" id="pw">
+                </div>
+                <button type="submit" class="btn btn-primary">전송</button>
+                <button type="button" class="btn btn-danger" id="close">닫기</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // 모달창을 클래스로 띄웠으면 닫을때도 클래스로 닫아야 한다 -> 일관성있게 코딩을 해야한다.
+        // + 자바스크립트 밑에 조작해야
+        
+        // 모든 브라우저는 이벤트 버블링(이벤트가 상위html로 퍼지는 현상)이 일어남
+
+
+        document.querySelector('.black-bg').addEventListener('click',function(e){
+
+            // 유용한 이벤트 관련함수들, function에 e를 넣으면 됨
+            // e.target; //유저가 실제로 누른 html 요소를 얘가 확인해줌
+            // e.currentTarget; //이벤트리스너 달린 곳 또는 this;
+            // e.preventDefault(); // 이벤트 기본동작 막아줌
+            // e.stopPropagation(); // 내 상위요소로 이벤트 버블링 막아줌
+            
+
+            console.log(e.target);
+            console.log($('.black-bg'));
+            
+            // 내가 실제로 누른게 까만배경이면 모달창 닫아주세요~
+            if ( e.target == document.querySelector('.black-bg') ) { //내가 실제로 누른거 == 까만배경
+                document.querySelector('.black-bg').classList.remove('show-modal');
+            }
+
+            // 이벤트 버블링이 일어날때는 이벤트 관련 함수들을 사용해야 
+        })
+
+
+    </script>
+
+
+    <div style="height: 2000px;"></div>
+    <script>
+        $('.btn.btn-primary').on('click', function () {
+
+            if (document.querySelectorAll('.form-control')[0].value == '' || document.querySelectorAll('.form-control')[1].value == '') {
+                alert('입력 필드를 모두 채워주세요.');
+            }
+
+            if (document.querySelectorAll('.form-control')[1].value.length < 6) {
+                alert('더 길게 입력하쇼')
+            }
+
+
+        });
+
+        $('#login').on('click', function () {
+            $('.black-bg').addClass('show-modal');
+        })
+
+        $('#close').on('click', function () {
+            $('.black-bg').removeClass('show-modal');
+        })
+
+
+        document.querySelectorAll('.navbar-toggler')[0].addEventListener('click', function () {
+            document.querySelector('.list-group').classList.toggle('show');
+        })
+
+        document.getElementById('email').addEventListener('input', function () {
+            console.log('안녕')
+        });
+
+        $('form').on('submit', function (e) {
+
+            var 비번 = document.getElementById('pw').value;
+            if (/[A-Z]/.test(비번) == false) {
+                alert('대문자없는데요')
+            }
+
+        });
+    </script>
+
+    <div style="overflow: hidden;">
+        <div class="slide-container">
+            <div class="slide-box">
+                <img src="/html/images (1).jpg">
+                <p>1번사진</p>
+            </div>
+            <div class="slide-box">
+                <img src="/html/images (2).jpg">
+                <p>2번사진</p>
+            </div>
+            <div class="slide-box">
+                <img src="/html/images (1).jpg">
+                <p>3번사진</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
+    <button class="next">다음</button>
+    <button class="back">이전</button>
+
+
+    <script>
+        $('.slide-1').on('click', function () {
+            $('.slide-container').css('transform', 'translateX(0vw)');
+        });
+        $('.slide-2').on('click', function () {
+            $('.slide-container').css('transform', 'translateX(-100vw)');
+        });
+        $('.slide-3').on('click', function () {
+            $('.slide-container').css('transform', 'translateX(-200vw)');
+        });
+
+        var 지금사진 = 1;
+
+        $('.next').on('click', function () {
+            if (지금사진 == 1) {//지금 보이는 사진이 1이면 - 몇번보고 있는지 보기위해서 포스트잇 붙여놓고 기록해놓으면 되지 않을까?
+                // 2번사진 보여주세요
+                $('.slide-container').css('transform', 'translateX(-100vw)');
+                지금사진++;
+            }
+            else if (지금사진 == 2) {
+                $('.slide-container').css('transform', 'translateX(-200vw)');
+                지금사진++;
+            }
+        })
+
+        $('.back').on('click', function () {
+            if (지금사진 == 2) {//지금 보이는 사진이 2이면 - 몇번보고 있는지 보기위해서 포스트잇 붙여놓고 기록해놓으면 되지 않을까?
+                // 1번사진 보여주세요
+                $('.slide-container').css('transform', 'translateX(0vw)');
+                지금사진--;
+            }
+            else if (지금사진 == 3) {
+                $('.slide-container').css('transform', 'translateX(-100vw)');
+                지금사진--;
+            }
+        })
+
+
+    </script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

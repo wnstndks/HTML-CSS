@@ -1,0 +1,92 @@
+body {
+  margin: 0
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.list-group {
+  display: none;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+.navbar-brand {
+  font-size: 25px;
+}
+
+.main-bg {
+  padding: 100px 20px;
+  background: lightgrey;
+}
+
+.alert-box {
+  background-color: skyblue;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+
+  /* css로 display를 숨기고 싶을때 
+    보여주고 싶을 때는 display : block */
+  display: none;
+}
+
+
+
+/* css는 하단에 적을수록 우선적용 */
+.show {
+  display: block;
+}
+
+.black-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  padding: 30px;
+
+  /* 애니메이션 주기 */
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+
+}
+
+.white-bg {
+  background: white;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.show-modal {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.dark {
+  background: black;
+  color: white;
+}
+
+.slide-container {
+  /* vw - 브라우저폭 */
+  width: 300vw;
+  /* transition: all 1s; */
+  /* transform: translateX(-100vw); 이게 최종화면 */
+}
+
+.slide-box {
+  width: 100vw;
+  float: left;
+}
+
+.slide-box img {
+  width: 1000px;
+}

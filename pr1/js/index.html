@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/js/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <h1 id="hello">안녕하세요</h1>
+    <h1 id="hi">JS chobo</h1>
+
+    <script>
+        // document.getElementById('??').??='??'
+        // 1.바꿀요소id 2.무엇을 3.어떻게
+        document.getElementById('hello').innerHTML='안녕'
+        document.getElementById('hello').style.fontSize='16px';
+        document.getElementById('hi').innerHTML='고수임'
+    </script>
+
+    <!-- UI 만드는 스텝 
+    1. HTML/CSS로 미리 디자인
+    2. 필요할 때 보여달라고 코드짬(자바스크립트로)-->
+    
+    <div class="alert-box" id="alert">
+        <p id='title'>알림창임</p>
+        <button id="close">닫기</button>
+    </div>
+    <button onclick="openAlert('block')">버튼</button>
+    <div></div>
+
+    <button onclick="openPersonal('아이디를 입력하세요')">버튼1</button>
+    <button onclick="openPersonal('비번을 입력하세요')">버튼2</button>
+    
+    <!-- 자바스크립트는 조작할 html 하단에 코드짜야 잘 -->
+    <script>
+        // 자바스크립트 function 문법 - 긴코드 축약하고 싶을때 사용
+        // 비슷한 코드들이 많을 때 파라미터 사용
+        // 복잡하면 한글부터 짜고 코드로 옮기
+        function openAlert(파라미터){
+            document.getElementById('alert').style.display=파라미터;
+        }
+        function closeAlert(){
+            document.getElementById('alert').style.display='none';
+        }
+
+        function openPersonal(파라미터){
+            document.getElementById('title').innerHTML=파라미터;
+            document.getElementById('alert').style.display='block'
+        }
+
+        // onclick넣고 뭘하는거 자체가 너무 김 -> addEventListener() 사용시 onclick 필요 없음
+        document.getElementById('close').addEventListener('click',function(){
+            // 위 아이디를 가지고 잇는 요소를 클릭하면, 이 함수 내 코드를 실행해준다.
+            document.getElementById('alert').style.display='none';
+            // event가 뭐냐면? 클릭 키입력 스크롤 드래그 등이 다 이벤트 -> 유저들이 조작하는 것들
+            // ->event 감지하고 싶으면 addEventListener('이벤트명')
+
+            // 함수 파라미터자리에 콜백함수가 들어가는데 자바스크립트에서는 뭔가 순차적으로 작성하고 싶을때 콜백함수를 사용
+        })
+    </script>
+
+
+</body>
+</html>

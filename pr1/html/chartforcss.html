@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/main2.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- 표만들땐 테이블 태그 -->
+    <div>
+        <table>
+            <!-- 제목행을 thead, 일반행은 tbody 안에 넣어주면 가독성 좋아짐 -->
+
+            <thead>
+                <!-- 가로 행 만들땐 tr태그 -->
+                <tr>
+                    <!-- 세로 열 만들 땐 td태그 -->
+                    <!-- 제목용 세로 열 만들 떈 th태그 -->
+                    <th>1</th>
+                    <!-- vertical-align: table 안에서 세로정렬할 때는 vertical align 사용, inline/inline-block 요소의 글씨간 세로정렬할때 씀
+                    display:inline 항상 옆으로 채워지는 폭과 너비가 없는 요소 -->
+                    <td style="vertical-align:middle">2</td>
+                    <td>3</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- 세로 열 만들 땐 td태그 -->
+                    <!-- 제목용 세로 열 만들 떈 th태그 -->
+                    <th>1</th>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- 
+        OOCSS
+        css고수 뼈대용 class 살점용 class 각각 제작 뼈대를 디자인하고 그 뒤에 살점 클래스를 하나 더 넣
+        -->
+    <div>
+        <button class="main-btn bg-red">더 알아보기</button>
+        <button class="main-btn bg-blue">더 알아보기</button>
+    </div>
+    <!-- class 작명할 때 창의력이 딸리면 BEM룰(Block Element Modifier) 따라하기 -->
+    <!-- class='덩어리 이름' 
+              ='덩어리이름__역할'
+              ='덩어리이름__역할-세부특징' -> 이건 별로인듯 -->
+    <div class="profile">
+        <img class="profile__img">
+        <h4 class="profile__title"></h4>
+        <h4 class="profile__content"></h4>
+        <button class="profile__button--red">버튼1</button>
+        <button class="profile__button--blue">버튼2</button>
+    </div>
+    <!-- 요즘은 React Vue로 Html 만들면 덩어리 단위로 파일 나눠서 코드를 짬
+        + 덩어리에만 사용가능한 CSS 생성 가능 
+        ==>중복이 발생해도 css파일이 다르기에 상관없음 -->
+</body>
+
+</html>

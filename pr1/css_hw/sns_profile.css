@@ -1,0 +1,39 @@
+body{
+    margin:0;
+}
+div{
+    box-sizing: border-box;
+}
+
+img{
+    border-radius: 100%;
+}
+
+h3,h4{
+    font-weight: bolder;
+}
+i{
+    color:#6fbaf8;
+}
+.card{
+    margin: 10px;
+}
+
+.card img{
+    padding: 50px;
+}
+
+.btn{
+    background-color:#6fbaf8; 
+    border:none;
+}
+
+.text-bg-light{
+    font-size: 20px;
+    border: 1px solid grey;
+    margin: 10px;
+}
+.card-find{
+    padding:50px;
+    text-align: center;
+}
