@@ -41,9 +41,10 @@ div {
     font-size: 20px;
     margin:100px;
 }
+
 .second-image{
     padding:1px;
-    background-color: blue;
+    background-color: #3457D5;
     width: 100%;
     height: 400px;
     color:white;
@@ -51,13 +52,20 @@ div {
     margin-left: auto;
     margin-right:auto;
 }
-.backg{
+
+
+
+.backg {
     background-color: white;
     border-radius: 50%;
     width: 100px;
     height: 100px;
-    color:blue;
+    color: #3457D5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .fas{
     text-align: center;
 }
@@ -73,11 +81,14 @@ div {
     justify-content: center; 
     align-items: center;
 }
-.myicon{
+
+.myicon {
     text-align: center;
-    padding:10px;
-    justify-content: center;
-    vertical-align: center;
+    padding: 10px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 i{
     font-size: 30px;
