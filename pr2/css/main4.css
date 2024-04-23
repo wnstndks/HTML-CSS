@@ -7,7 +7,7 @@ div {
 }
 
 .backgroundpage {
-    background-color: #E0E0E0;
+    background-color: #f7f9fc;
 }
 
 .container_1 {
@@ -55,4 +55,26 @@ div {
 
 td{
     padding:10px;
+}
+
+.linep {
+    margin-top: 30px;
+}
+
+.linep p {
+    color: #6CB4EE;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 240px;
+}
+
+.linep > div {
+    border: 1px solid #E0E0E0;
+    width: 75%;
+    margin: 0 auto; /* Center-align div */
+}
+
+.linep > div > div {
+    border-top: 1px solid #6CB4EE;
+    width: 100px;
 }
