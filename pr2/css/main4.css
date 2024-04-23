@@ -103,7 +103,7 @@ td{
 }
 
 .aboutcon{
-    width:55%;
+    width:60%;
     height: 800px;
     background-color: white;
     border: 1px solid #E0E0E0;
@@ -113,8 +113,37 @@ td{
     margin-left: 50px;
 }
 
+.aboutcon div p {
+    margin-bottom: -10px; /* Adjust this value as needed */
+}
+
+.iconclass{
+    margin-top: 30px;
+    display: flex;
+}
+.skillicon{
+    border: 1px solid black;
+    border-radius: 60px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    margin-left: 10px;
+}
+.skillicon2{
+    border: 1px solid black;
+    border-radius: 60px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+
+
 .workcon2{
-    width: 25%;
+    width: 20%;
     height: 400px;
     background-color: white;
     border: 1px solid #E0E0E0;
