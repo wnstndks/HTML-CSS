@@ -21,6 +21,9 @@ div {
     margin-right: auto;
     margin-top: 50px;
     padding: 50px;
+    border: 1px solid #E0E0E0;
+    box-shadow: #E0E0E0;
+    border-radius: 10px;
 }
 
 .profileim{
@@ -69,12 +72,55 @@ td{
 }
 
 .linep > div {
-    border: 1px solid #E0E0E0;
+    background-color: #E0E0E0;
     width: 75%;
     margin: 0 auto; /* Center-align div */
 }
 
 .linep > div > div {
-    border-top: 1px solid #6CB4EE;
+    border-top: 3px solid #6CB4EE;
     width: 100px;
 }
+
+.container_2 {
+    width: 80%;
+    height: 1000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    display: flex;
+}
+
+.workcon{
+    width: 20%;
+    height: 600px;
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    box-shadow: #E0E0E0;
+    border-radius: 10px;
+    padding:30px;
+}
+
+.aboutcon{
+    width:55%;
+    height: 800px;
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    box-shadow: #E0E0E0;
+    border-radius: 10px;
+    padding:30px;
+    margin-left: 50px;
+}
+
+.workcon2{
+    width: 25%;
+    height: 400px;
+    background-color: white;
+    border: 1px solid #E0E0E0;
+    box-shadow: #E0E0E0;
+    border-radius: 10px;
+    padding:30px;
+    margin-left: 50px;
+}
+
