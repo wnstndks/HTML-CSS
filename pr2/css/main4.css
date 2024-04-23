@@ -149,7 +149,11 @@ td{
     border: 1px solid #E0E0E0;
     box-shadow: #E0E0E0;
     border-radius: 10px;
-    padding:30px;
+    padding:50px;
     margin-left: 50px;
+    text-align: center;
 }
 
+.fireicon {
+    color:#6CB4EE;/* Adjust this value to change the size */
+}
