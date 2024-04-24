@@ -13,9 +13,14 @@ div {
     position: fixed;
 }
 
-.nav-item{
-    color:white;
-    margin-top: 10px;
-    padding:20px;
-    font-size: 20px;
+.navbar.bg-body-tertiary > .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar.bg-body-tertiary .btn.btn-outline-success {
+    color: #ffffff;
+    background-color: black;
+    border-color: black;
 }
