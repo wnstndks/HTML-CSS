@@ -6,6 +6,10 @@ div {
     box-sizing: border-box;
 }
 
+.background_color{
+    background-color: #ffffff;
+}
+
 .nav{
     background-color: blue;
     width: 50px;
@@ -23,4 +27,35 @@ div {
     color: #ffffff;
     background-color: black;
     border-color: black;
+}
+
+.container{
+    display: flex;
+
+}
+
+.white_box{
+    width:400px;
+    height: 120px;
+    box-shadow: 1px 1px 3px 1px grey;
+    border-radius: 3px;
+    margin-left: 50px;
+    display: flex;
+    vertical-align: center;
+}
+
+.line{
+    width: 3px;
+    height: 100%;
+    background-color: blue;
+    text-align: left;
+    margin-right: 30px;
+}
+
+.bi.bi-calendar-fill{
+    font-size: 30px;
+    color:grey;
+    margin-left: 50px;
+    vertical-align: center;
+    margin-top: 20px;
 }
